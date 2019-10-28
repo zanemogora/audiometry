@@ -4,21 +4,31 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: rgb(28, 156, 150);
+body {   
+    background: url(images/coolbackground.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 header {
-    background: rgb(196, 192, 192);
+    background: url(images/coolbackground.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     padding: 0px; 
 }
 
 header >h1 {
     color: black; 
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
     font-family: Impact, Charcoal, sans-serif;
 }
+
+
 .score-board {
     margin: 10px auto;
     border: 3px solid black;
