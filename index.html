@@ -6,71 +6,25 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <header><h1>Aplikácia pre rečovú audiometriu (1.kolo)</h1></header>
         
-        <div class="score-board">
-                <div id="correct-label" class="badge">správne</div>
-                <div id="wrong-label" class="badge2">nesprávne</div>
-                <span id="correct-score">0</span>:<span id="wrong-score">0</span>
-        </div>
-    
-        <a class="play-btn" id ="playbtn" href="#"></a>
-
-        <!--------
         <div class="result">
-            <p>Vitajte v 1.kole!</p>
+            <p>Víta Vás Aplikácia pre rečovú audiometriu!</p>
         </div>
-        ---->
 
-        <div class="choices">
-            <div class="choice" id="cervene_auto">
-                <a href="#" id="index2" onclick="document.location=this.id+'.html';return false; " >
-                    <img src="images/28_cervene_auto.jpg" alt="" width="300" height="400" >
-                </a>
-            </div>
-            
-            <div class="choice" id="cervena">
-                <a href="#" id="index2" onclick="document.location=this.id+'.html';return false; " >        
-                    <img src="images/6_cervena.jpg" alt="" width="300" height="400" >
-                </a>
-            </div>
+        <p id="action-message">Hru ukončíte zatvorením okna webového prehliadača.</p>        
 
-            <div class="choice" id="jablko_jablcko">
-                <a href="#" id="index2" onclick="document.location=this.id+'.html';return false; " >        
-                    <img src="images/46_jablko_jablcko.jpg" alt="" width="300" height="400" >
-                </a>
-            </div>
+        <p id="action-message2">Stlačením tlačidla "NEW GAME" spustíte novú hru.</p>
+        
 
-            <div class="choice" id="kvet_kvietok">
-                <a href="#" id="index2" onclick="document.location=this.id+'.html';return false; " >        
-                    <img src="images/37_kvet_kvietok.jpg" alt="" width="300" height="400" >
-                </a>
-            </div>
-
-        </div>
-        <p id="action-message">Nápoveda: Stlačte tlačidlo prehrávania zvuku a kliknutím vyberte obrázok prislúchajúci ku prehranému zvuku.</p>   
-    
-
-        <!-----<div class="playbutton">
-            <div class="playbutton2" id="playbutton3">
-                    <img src="images/playbutton.gif" alt="">
-            </div>
-        </div>
-        --->
-
-        <!---<p id="action-message2">Stlačením prejdite na 2.kolo</p>--->
-
-        <!----------
         <div class="nextbutton">
-                <div class="nextbutton2" id="nextbutton3">
-                    <a href="#" id="index2" onclick="document.location=this.id+'.html';return false;" >
-                        <img src="images/nextbutton.gif" alt="nextbutton3" class="nextbutton"/>
-                    </a>
-                </div>
+            <div class="nextbutton2" id="nextbutton3">
+                <a href="#" id="index1" onclick="document.location=this.id+'.html';return false;" >
+                    <img src="images/newgame.jpg" alt="nextbutton3" width="600" height="400" class="nextbutton" />
+                </a>
+            </div>
         </div>
-        ------>
-
-        <script src="app.js" charset="utf-8"></script>
+        <p id="action-message2">Autor hry: Bc.Lukáš Hudák (Diplomová práca)</p>
+        <p id="action-message2">Kopírovanie a šírenie hry bez vedomia autora je zakázané!</p>
 
     </body>
 </html>
