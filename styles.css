@@ -4,6 +4,48 @@
     box-sizing: border-box;
 }
 
+input.button {
+  
+  
+  cursor:pointer;
+}
+  
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  margin: 10px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 30px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+/* Two-column layout */
+.col {
+  float: center;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 20px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
 body {   
     background: url(images/coolbackground.png) no-repeat center center fixed; 
     -webkit-background-size: cover;
