@@ -15,6 +15,9 @@ var score2 = localStorage.getItem("computerscore");
 userScore_span.innerHTML = score;
 computerScore_span.innerHTML = score2;
 
+
+
+
 //Nahodny vyber z nahravok
 function getComputerChoice(){
     const choices =["vlak_vlacik_sound","vtak_vtacik_sound"];
@@ -31,6 +34,9 @@ function win(userChoice, computerChoice){
     localStorage.setItem("userscore", score);
     localStorage.setItem("computerscore", score2);
     
+
+    window.location.replace('vyhra3.html');
+
     /*userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
@@ -48,6 +54,8 @@ function lose(userChoice, computerChoice){
     localStorage.setItem("userscore", score);
     localStorage.setItem("computerscore", score2);
     
+    window.location.replace('prehra3.html');
+
     /*computerScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;

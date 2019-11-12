@@ -32,6 +32,9 @@ function win(userChoice, computerChoice){
     userScore_span.innerHTML = score;
     computerScore_span.innerHTML = score2;
 
+    window.location.replace('vyhra.html');
+
+
     /*result_p.innerHTML = "Správna odpoveď.";
     var audio = new Audio('audio/winsound.mp3');
     audio.play(); */  
@@ -48,6 +51,8 @@ function lose(userChoice, computerChoice){
 
     userScore_span.innerHTML = score;
     computerScore_span.innerHTML = score2;
+
+    window.location.replace('prehra.html');
 
 
     /*result_p.innerHTML = "Nesprávna odpoveď.";   
