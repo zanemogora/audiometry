@@ -5,10 +5,10 @@ const computerScore_span = document.getElementById("wrong-score");
 const score_Board = document.querySelector(".score-board");
 const result_p = document.querySelector(".result >p");
 
-const modre_auto_div = document.getElementById("macka_macicka");
+const modre_auto_div = document.getElementById("lopta_lopticka");
 const bicykel_div = document.getElementById("ruka");
-const lietadlo_lietadielko_div = document.getElementById("kvet_kvietok");
-const autobus_div = document.getElementById("dzus_dzusik");
+const lietadlo_lietadielko_div = document.getElementById("kon_konik");
+const autobus_div = document.getElementById("kvet_kvietok");
 
 const play_btn = document.getElementById("playbtn");
 
@@ -21,7 +21,7 @@ computerScore_span.innerHTML = score2;
 
 //Nahodny vyber z nahravok
 function getComputerChoice(){
-    const choices =["macka_macicka_sound","ruka_sound","kvet_kvietok_sound", "dzus_dzusik_sound"];
+    const choices =["lopta_lopticka_sound","ruka_sound","kon_konik_sound", "kvet_kvietok_sound"];
     const randomNumber = Math.floor(Math.random() * 4);
     return choices[randomNumber];
 }
@@ -35,7 +35,7 @@ function win(userChoice, computerChoice){
     localStorage.setItem("userscore", score);
     localStorage.setItem("computerscore", score2);
 
-    window.location.replace('vyhra6.html');
+    window.location.replace('vyhra7.html');
 
     
 }
@@ -49,7 +49,7 @@ function lose(userChoice, computerChoice){
     localStorage.setItem("userscore", score);
     localStorage.setItem("computerscore", score2);
     
-    window.location.replace('prehra6.html');
+    window.location.replace('prehra7.html');
 
     
 }
@@ -63,10 +63,10 @@ function game(userChoice, computerChoice){
     switch (userChoice + computerChoice){
         
         
-            case "macka_macickamacka_macicka_sound":
+            case "lopta_loptickalopta_lopticka_sound":
             case "rukaruka_sound":
+            case "kon_konikkon_konik_sound":
             case "kvet_kvietokkvet_kvietok_sound":
-            case "dzus_dzusikdzus_dzusik_sound":
                 win(userChoice, computerChoice);
                 break;
             
@@ -86,8 +86,8 @@ function main(){
 //funguje mi to tak ze vygenerujem premennu computerChoice o nejakej hodnote a drzim hodnotu aj pri zmene vstupu pouzivatela, este mi treba if (generovanahodnota) then zapni konkretny zvuk 
     
     play_btn.addEventListener('click', function() {
-       if (computerChoice == 'macka_macicka_sound') {
-            var audio = new Audio('audio/10_mačka_mačička.wav');
+       if (computerChoice == 'lopta_lopticka_sound') {
+            var audio = new Audio('audio/36_lopta_loptička.wav');
             audio.play();
        }
 
@@ -96,20 +96,20 @@ function main(){
             audio.play();
        }
 
-       if (computerChoice == 'kvet_kvietok_sound') {
-            var audio = new Audio('audio/37_kvietok.wav');
+       if (computerChoice == 'kon_konik_sound') {
+            var audio = new Audio('audio/17_kôň_koník.wav');
             audio.play();
        }
 
-       if (computerChoice == 'dzus_dzusik_sound') {
-            var audio = new Audio('audio/49b_džús_džúsik.wav');
+       if (computerChoice == 'kvet_kvietok_sound') {
+            var audio = new Audio('audio/37_kvietok.wav');
             audio.play();
        }
     })
 
 
     modre_auto_div.addEventListener('click', function() {
-        game("macka_macicka", computerChoice);
+        game("lopta_lopticka", computerChoice);
     })
 
     bicykel_div.addEventListener('click', function() {
@@ -117,11 +117,11 @@ function main(){
     })
 
     lietadlo_lietadielko_div.addEventListener('click', function() {
-        game("kvet_kvietok", computerChoice);
+        game("kon_konik", computerChoice);
     })
 
     autobus_div.addEventListener('click', function() {
-        game("dzus_dzusik", computerChoice);
+        game("kvet_kvietok", computerChoice);
     })
 
     
