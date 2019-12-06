@@ -5,9 +5,9 @@ const computerScore_span = document.getElementById("wrong-score");
 const score_Board = document.querySelector(".score-board");
 const result_p = document.querySelector(".result >p");
 
-const babika_place_div = document.getElementById("auto_auticko");
-const babika_div = document.getElementById("medved_maco");
-const babika_spi_div = document.getElementById("oci");
+const babika_place_div = document.getElementById("sova_sovicka");
+const babika_div = document.getElementById("pes_psik_havo");
+const babika_spi_div = document.getElementById("noha");
 
 //const playbutton_div = document.getElementById("playbutton3");
 const play_btn = document.getElementById("playbtn");
@@ -21,7 +21,7 @@ computerScore_span.innerHTML = score2;
 
 //Nahodny vyber z nahravok
 function getComputerChoice(){
-    const choices =["auto_auticko_sound","medved_maco_sound","oci_sound"];
+    const choices =["sova_sovicka_sound","pes_psik_havo_sound","noha_sound"];
     const randomNumber = Math.floor(Math.random() * 3);
     return choices[randomNumber];
 }
@@ -35,7 +35,7 @@ function win(userChoice, computerChoice){
     localStorage.setItem("userscore", score);
     localStorage.setItem("computerscore", score2);
 
-    window.location.replace('vyhra11.html');
+    window.location.replace('vyhra12.html');
 
     
 }
@@ -49,7 +49,7 @@ function lose(userChoice, computerChoice){
     localStorage.setItem("userscore", score);
     localStorage.setItem("computerscore", score2);
     
-    window.location.replace('prehra11.html');
+    window.location.replace('prehra12.html');
 
    
 }
@@ -63,9 +63,9 @@ function game(userChoice, computerChoice){
     switch (userChoice + computerChoice){
         
         
-            case "auto_autickoauto_auticko_sound":
-            case "medved_macomedved_maco_sound":
-            case "ocioci_sound":
+            case "sova_sovickasova_sovicka_sound":
+            case "pes_psik_havopes_psik_havo_sound":
+            case "nohanoha_sound":
                 win(userChoice, computerChoice);
                 break;
             
@@ -85,18 +85,18 @@ function main(){
 //funguje mi to tak ze vygenerujem premennu computerChoice o nejakej hodnote a drzim hodnotu aj pri zmene vstupu pouzivatela, este mi treba if (generovanahodnota) then zapni konkretny zvuk 
     
     play_btn.addEventListener('click', function() {
-       if (computerChoice == 'auto_auticko_sound') {
-            var audio = new Audio('audio/2a_auto_autíčko.wav');
+       if (computerChoice == 'sova_sovicka_sound') {
+            var audio = new Audio('audio/18_sova_sovička.wav');
             audio.play();
        }
 
-       if (computerChoice == 'medved_maco_sound') {
-            var audio = new Audio('audio/13_medveď_maco.wav');
+       if (computerChoice == 'pes_psik_havo_sound') {
+            var audio = new Audio('audio/11a_pes_psík_havo.wav');
             audio.play();
        }
 
-       if (computerChoice == 'oci_sound') {
-            var audio = new Audio('audio/41_oči.wav');
+       if (computerChoice == 'noha_sound') {
+            var audio = new Audio('audio/43_noha.wav');
             audio.play();
        }
 
@@ -104,15 +104,15 @@ function main(){
 
 
     babika_place_div.addEventListener('click', function() {
-        game("auto_auticko", computerChoice);
+        game("sova_sovicka", computerChoice);
     })
 
     babika_div.addEventListener('click', function() {
-        game("medved_maco", computerChoice);
+        game("pes_psik_havo", computerChoice);
     })
 
     babika_spi_div.addEventListener('click', function() {
-        game("oci", computerChoice);
+        game("noha", computerChoice);
     })
  
 }
