@@ -170,6 +170,29 @@ header >h1 {
     transition: all 0.3s ease; 
 }
 
+.home-btn {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+  
+}
+
+#outer
+{
+    width:100%;
+    text-align: center;
+    margin-left: -100px
+
+    
+}
+.inner
+{
+    display: inline-block;
+    margin-left: 200px
+
+}
+
 .playbutton:hover {
     cursor: pointer;
 }

@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <header><h1>Aplikácia pre rečovú audiometriu (1.kolo)</h1></header>
+        <header><h1>Aplikácia pre rečovú audiometriu</h1></header>
         
         <div class="score-board">
                 <div id="correct-label" class="badge">správne</div>
@@ -48,8 +48,27 @@
             </div>
 
         </div>
-        <p id="action-message">Nápoveda: Stlačte tlačidlo prehrávania zvuku a kliknutím vyberte obrázok prislúchajúci ku prehranému zvuku.</p>   
+
+
+        <div id="outer">
+            
+                <div class="inner">
+                        <a href="#" id="vyberkola" onclick="document.location=this.id+'.html';return false; " >
+                            <img src="images/back.png" alt="" width="100" height="100">
+                        </a>            
+                </div>
     
+                <div class="inner">
+                        <a href="#" id="pribeh" onclick="document.location=this.id+'.html';return false; " >
+                            <img src="images/home.png" alt="" width="100" height="100">
+                        </a>
+                </div>
+    
+            </div>
+            
+        <p id="action-message">Nápoveda: Stlačte tlačidlo prehrávania zvuku a kliknutím vyberte obrázok prislúchajúci ku prehranému zvuku.</p>   
+        
+        
 
         <!-----<div class="playbutton">
             <div class="playbutton2" id="playbutton3">

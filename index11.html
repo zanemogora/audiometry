@@ -6,14 +6,16 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <header><h1>Aplikácia pre rečovú audiometriu (11.kolo)</h1></header>
+        <header><h1>Aplikácia pre rečovú audiometriu</h1></header>
         <div class="score-board">
             <div id="correct-label" class="badge">správne</div>
             <div id="wrong-label" class="badge2">nesprávne</div>
             <span id="correct-score">0</span>:<span id="wrong-score">0</span>
         </div>
 
+        
         <a class="play-btn" id ="playbtn" href="#"></a>
+
 
         <div class="choices">
             <div class="choice" id="auto_auticko">
@@ -34,6 +36,23 @@
            
         </div>
         
+        <div id="outer">
+            
+            <div class="inner">
+                    <a href="#" id="vyberkola" onclick="document.location=this.id+'.html';return false; " >
+                        <img src="images/back.png" alt="" width="100" height="100">
+                    </a>            
+            </div>
+
+            <div class="inner">
+                    <a href="#" id="pribeh" onclick="document.location=this.id+'.html';return false; " >
+                        <img src="images/home.png" alt="" width="100" height="100">
+                    </a>
+            </div>
+
+        </div>
+
+
         <p id="action-message">Nápoveda: Stlačte tlačidlo prehrávania zvuku a kliknutím vyberte obrázok prislúchajúci ku prehranému zvuku.</p>        
         
         <script src="app11.js" charset="utf-8"></script>
