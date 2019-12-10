@@ -5,7 +5,22 @@
 }
 
 .button {
-  padding: 15px 25px;
+  padding: 25px 25px;
+  font-size: 40px;
+  display: block;/*centrovanie tlacidla 1.riadok*/
+  margin: 20px;/*centrovanie tlacidla 2.riadok*/
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button2 {
+  padding: 25px 25px;
   font-size: 40px;
   display: block;/*centrovanie tlacidla 1.riadok*/
   margin: auto;/*centrovanie tlacidla 2.riadok*/
