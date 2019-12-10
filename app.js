@@ -13,6 +13,7 @@ const kvet_kvietok_div = document.getElementById("kvet_kvietok");
 const play_btn = document.getElementById("playbtn");
 
 
+
 //Nahodny vyber z nahravok
 function getComputerChoice(){
     const choices =["cervene_auto_sound","cervena_sound","jablko_jablcko_sound", "kvet_kvietok_sound"];

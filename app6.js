@@ -12,7 +12,6 @@ const autobus_div = document.getElementById("dzus_dzusik");
 
 const play_btn = document.getElementById("playbtn");
 
-localStorage.clear();
 
 var score = localStorage.getItem("userscore");
 var score2 = localStorage.getItem("computerscore");
