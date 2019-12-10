@@ -12,7 +12,8 @@ const kvet_kvietok_div = document.getElementById("kvet_kvietok");
 //const playbutton_div = document.getElementById("playbutton3");
 const play_btn = document.getElementById("playbtn");
 
-
+var score = 0;
+var score2 = 0;
 
 //Nahodny vyber z nahravok
 function getComputerChoice(){

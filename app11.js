@@ -12,10 +12,8 @@ const babika_spi_div = document.getElementById("oci");
 //const playbutton_div = document.getElementById("playbutton3");
 const play_btn = document.getElementById("playbtn");
 
-var score = localStorage.getItem("userscore");
-var score2 = localStorage.getItem("computerscore");
-userScore_span.innerHTML = score;
-computerScore_span.innerHTML = score2;
+var score = 0;
+var score2 = 0;
 
 
 
@@ -29,11 +27,16 @@ function getComputerChoice(){
 //vyhra
 function win(userChoice, computerChoice){
     
-    score++;
+    userScore++;
+
+    localStorage.setItem("userscore", userScore);
+    localStorage.setItem("computerscore", computerScore);
+    var score = localStorage.getItem("userscore");
+    var score2 = localStorage.getItem("computerscore");
+    
     userScore_span.innerHTML = score;
     computerScore_span.innerHTML = score2;
-    localStorage.setItem("userscore", score);
-    localStorage.setItem("computerscore", score2);
+
 
     window.location.replace('vyhra11.html');
 
@@ -43,11 +46,14 @@ function win(userChoice, computerChoice){
 //prehra
 function lose(userChoice, computerChoice){
     
-    score2++;
+    localStorage.setItem("userscore", userScore);
+    localStorage.setItem("computerscore", computerScore);
+    var score = localStorage.getItem("userscore");
+    var score2 = localStorage.getItem("computerscore");
+
     userScore_span.innerHTML = score;
     computerScore_span.innerHTML = score2;
-    localStorage.setItem("userscore", score);
-    localStorage.setItem("computerscore", score2);
+
     
     window.location.replace('prehra11.html');
 

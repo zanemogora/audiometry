@@ -7,6 +7,8 @@ var score2 = localStorage.getItem("computerscore");
 userScore_span.innerHTML = score;
 computerScore_span.innerHTML = score2;
 
+localStorage.clear();
+
 
 
 function main(){

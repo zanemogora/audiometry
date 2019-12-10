@@ -12,13 +12,8 @@ const autobus_div = document.getElementById("dzus_dzusik");
 
 const play_btn = document.getElementById("playbtn");
 
-
-var score = localStorage.getItem("userscore");
-var score2 = localStorage.getItem("computerscore");
-userScore_span.innerHTML = score;
-computerScore_span.innerHTML = score2;
-
-
+var score = 0;
+var score2 = 0;
 
 //Nahodny vyber z nahravok
 function getComputerChoice(){
@@ -29,12 +24,15 @@ function getComputerChoice(){
 
 //vyhra
 function win(userChoice, computerChoice){
+    userScore++;
+
+    localStorage.setItem("userscore", userScore);
+    localStorage.setItem("computerscore", computerScore);
+    var score = localStorage.getItem("userscore");
+    var score2 = localStorage.getItem("computerscore");
     
-    score++;
     userScore_span.innerHTML = score;
     computerScore_span.innerHTML = score2;
-    localStorage.setItem("userscore", score);
-    localStorage.setItem("computerscore", score2);
 
     window.location.replace('vyhra6.html');
 
@@ -44,11 +42,16 @@ function win(userChoice, computerChoice){
 //prehra
 function lose(userChoice, computerChoice){
     
-    score2++;
+    computerScore++;
+
+   localStorage.setItem("userscore", userScore);
+    localStorage.setItem("computerscore", computerScore);
+    var score = localStorage.getItem("userscore");
+    var score2 = localStorage.getItem("computerscore");
+
     userScore_span.innerHTML = score;
     computerScore_span.innerHTML = score2;
-    localStorage.setItem("userscore", score);
-    localStorage.setItem("computerscore", score2);
+
     
     window.location.replace('prehra6.html');
 
