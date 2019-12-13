@@ -9,13 +9,19 @@ const vlak_vlacik_div = document.getElementById("vlak_vlacik");
 const vtak_vtacik_div = document.getElementById("vtak_vtacik");
 //const playbutton_div = document.getElementById("playbutton3");
 const play_btn = document.getElementById("playbtn");
+const back_btn = document.getElementById("inner1");
 
-var score = localStorage.getItem("userscore");
-var score2 = localStorage.getItem("computerscore");
-userScore_span.innerHTML = score;
-computerScore_span.innerHTML = score2;
+//kvoli tlacidlu back, aby vedel rozoznat program body v kolach
+var score_prve_user = localStorage.getItem("userscore");
+var score_prve_computer = localStorage.getItem("computerscore");
+console.log("User:Computer prve kolo =>" + score_prve_user,score_prve_computer);
 
-
+//kvoli dalsiemu inkrementovaniu score
+var score5 = localStorage.getItem("userscore2");
+var score6 = localStorage.getItem("computerscore2");
+console.log("User:Computer druhe kolo =>" + score5,score6);
+userScore_span.innerHTML = score5;
+computerScore_span.innerHTML = score6;
 
 
 //Nahodny vyber z nahravok
@@ -28,40 +34,29 @@ function getComputerChoice(){
 //vyhra
 function win(userChoice, computerChoice){
     
-    score++;
-    userScore_span.innerHTML = score;
-    computerScore_span.innerHTML = score2;
-    localStorage.setItem("userscore", score);
-    localStorage.setItem("computerscore", score2);
-    
+    score5++;
+    userScore_span.innerHTML = score5;
+    computerScore_span.innerHTML = score6;
+    localStorage.setItem("userscore3", score5);
+    localStorage.setItem("computerscore3", score6);
 
     window.location.replace('vyhra3.html');
 
-    /*userScore++;
-    userScore_span.innerHTML = userScore;
-    computerScore_span.innerHTML = computerScore;
-    /*result_p.innerHTML = "Správna odpoveď. Vyhrali ste!";
-    var audio = new Audio('audio/winsound.mp3');
-    audio.play();   */
+
 }
 
 //prehra
 function lose(userChoice, computerChoice){
     
-    score2++;
-    userScore_span.innerHTML = score;
-    computerScore_span.innerHTML = score2;
-    localStorage.setItem("userscore", score);
-    localStorage.setItem("computerscore", score2);
+    score6++;
+    userScore_span.innerHTML = score5;
+    computerScore_span.innerHTML = score6;
+    localStorage.setItem("userscore3", score5);
+    localStorage.setItem("computerscore3", score6);
     
     window.location.replace('prehra3.html');
 
-    /*computerScore++;
-    userScore_span.innerHTML = userScore;
-    computerScore_span.innerHTML = computerScore;
-    /*result_p.innerHTML = "Nesprávna odpoveď. Prehrali ste!";   
-    var audio = new Audio('audio/losesound.mp3');
-    audio.play(); */ 
+    
 }
 
 //logika hry
@@ -93,6 +88,22 @@ function main(){
 
 //funguje mi to tak ze vygenerujem premennu computerChoice o nejakej hodnote a drzim hodnotu aj pri zmene vstupu pouzivatela, este mi treba if (generovanahodnota) then zapni konkretny zvuk 
     
+    back_btn.addEventListener('click', function() {
+        console.log("STLACIL SI BACK");
+        
+        if (score5 > score_prve_user) {
+            score5--;
+            localStorage.setItem("userscore", score5);
+        }
+
+        if (score6 > score_prve_computer) {
+            score6--;
+            localStorage.setItem("computerscore", score6);
+        }
+
+        
+    })
+
     play_btn.addEventListener('click', function() {
        if (computerChoice == 'vlak_vlacik_sound') {
             var audio = new Audio('audio/4_vlak_vláčik.wav');

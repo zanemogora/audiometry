@@ -12,10 +12,11 @@ const macka_macicka_div = document.getElementById("macka_macicka");
 //const playbutton_div = document.getElementById("playbutton3");
 const play_btn = document.getElementById("playbtn");
 
-var score = localStorage.getItem("userscore");
-var score2 = localStorage.getItem("computerscore");
-userScore_span.innerHTML = score;
-computerScore_span.innerHTML = score2;
+//kvoli dalsiemu inkrementovaniu score
+var score3 = localStorage.getItem("userscore");
+var score4 = localStorage.getItem("computerscore");
+userScore_span.innerHTML = score3;
+computerScore_span.innerHTML = score4;
 
 
 
@@ -29,42 +30,29 @@ function getComputerChoice(){
 //vyhra
 function win(userChoice, computerChoice){
 
-    //userScore++;
-
-    /*var score3 = localStorage.getItem("userscore");
-    var score4 = localStorage.getItem("computerscore");*/
-    //localStorage.setItem("userscore", userScore);
-    score++;
-    userScore_span.innerHTML = score;
-    computerScore_span.innerHTML = score2;
-    localStorage.setItem("userscore", score);
-    localStorage.setItem("computerscore", score2);
+    score3++;
+    userScore_span.innerHTML = score3;
+    computerScore_span.innerHTML = score4;
+    localStorage.setItem("userscore2", score3);
+    localStorage.setItem("computerscore2", score4);
 
     window.location.replace('vyhra2.html');
 
-    /*result_p.innerHTML = "Správna odpoveď. Vyhrali ste!";
-    var audio = new Audio('audio/winsound.mp3');
-    audio.play();*/   
+      
 }
 
 //prehra
 function lose(userChoice, computerChoice){
 
-    //computerScore++;
-
-    /*var score3 = localStorage.getItem("userscore");
-    var score4 = localStorage.getItem("computerscore");*/
-    score2++;
-    userScore_span.innerHTML = score;
-    computerScore_span.innerHTML = score2;
-    localStorage.setItem("userscore", score);
-    localStorage.setItem("computerscore", score2);
+   
+    score4++;
+    userScore_span.innerHTML = score3;
+    computerScore_span.innerHTML = score4;
+    localStorage.setItem("userscore2", score3);
+    localStorage.setItem("computerscore2", score4);
 
     window.location.replace('prehra2.html');
 
-    /*result_p.innerHTML = "Nesprávna odpoveď. Prehrali ste!";   
-    var audio = new Audio('audio/losesound.mp3');
-    audio.play(); */ 
 }
 
 //logika hry
@@ -97,8 +85,11 @@ function main(){
     console.log("Computer choice =>" + computerChoice);
     
 //funguje mi to tak ze vygenerujem premennu computerChoice o nejakej hodnote a drzim hodnotu aj pri zmene vstupu pouzivatela, este mi treba if (generovanahodnota) then zapni konkretny zvuk 
-    
-    play_btn.addEventListener('click', function() {
+   
+
+
+
+play_btn.addEventListener('click', function() {
        if (computerChoice == 'pes_psik_havo_sound') {
             var audio = new Audio('audio/11a_pes_psík_havo.wav');
             audio.play();
@@ -118,7 +109,7 @@ function main(){
             var audio = new Audio('audio/10_mačka_mačička.wav');
             audio.play();
        }
-    })
+})
 
 
     pes_psik_havo_div.addEventListener('click', function() {

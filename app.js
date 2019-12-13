@@ -15,6 +15,7 @@ const play_btn = document.getElementById("playbtn");
 var score = 0;
 var score2 = 0;
 
+
 //Nahodny vyber z nahravok
 function getComputerChoice(){
     const choices =["cervene_auto_sound","cervena_sound","jablko_jablcko_sound", "kvet_kvietok_sound"];
@@ -24,36 +25,28 @@ function getComputerChoice(){
 
 //vyhra
 function win(userChoice, computerChoice){
-    userScore++;
-
-    localStorage.setItem("userscore", userScore);
-    localStorage.setItem("computerscore", computerScore);
-    var score = localStorage.getItem("userscore");
-    var score2 = localStorage.getItem("computerscore");
     
+    score++;
     userScore_span.innerHTML = score;
     computerScore_span.innerHTML = score2;
+    localStorage.setItem("userscore", score);
+    localStorage.setItem("computerscore", score2);
 
     window.location.replace('vyhra.html');
 
 
-    /*result_p.innerHTML = "Správna odpoveď.";
-    var audio = new Audio('audio/winsound.mp3');
-    audio.play(); */  
+
 }
 
 //prehra
 function lose(userChoice, computerChoice){
-    computerScore++;
 
-    localStorage.setItem("userscore", userScore);
-    localStorage.setItem("computerscore", computerScore);
-    var score = localStorage.getItem("userscore");
-    var score2 = localStorage.getItem("computerscore");
-
+    score2++;
     userScore_span.innerHTML = score;
     computerScore_span.innerHTML = score2;
-
+    localStorage.setItem("userscore", score);
+    localStorage.setItem("computerscore", score2);
+  
     window.location.replace('prehra.html');
 
 
