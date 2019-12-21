@@ -314,8 +314,6 @@ header >h1 {
     cursor: pointer;
 }
 
-
-
 #action-message2 {
     text-align: center;
     color: black;
@@ -327,5 +325,80 @@ header >h1 {
     color: black;
     font-family: Impact, Charcoal, sans-serif;
     font-size: 30px;
+}
+
+#progressbar {
+  background-color: black;
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+}
+
+#progressbar>div {
+  background-color: orange;
+  width: 20%;
+  /* Adjust with JavaScript */
+  height: 20px;
+  border-radius: 10px;
+}
+
+#progressbar2 {
+  background-color: black;
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+}
+
+#progressbar2>div {
+  background-color: orange;
+  width: 40%;
+  /* Adjust with JavaScript */
+  height: 20px;
+  border-radius: 10px;
+}
+
+#progressbar3 {
+  background-color: black;
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+}
+
+#progressbar3>div {
+  background-color: orange;
+  width: 60%;
+  /* Adjust with JavaScript */
+  height: 20px;
+  border-radius: 10px;
+}
+
+#progressbar4 {
+  background-color: black;
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+}
+
+#progressbar4>div {
+  background-color: orange;
+  width: 80%;
+  /* Adjust with JavaScript */
+  height: 20px;
+  border-radius: 10px;
+}
+
+#progressbar5 {
+  background-color: black;
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+}
+
+#progressbar5>div {
+  background-color: orange;
+  width: 100%;
+  /* Adjust with JavaScript */
+  height: 20px;
+  border-radius: 10px;
 }
 
