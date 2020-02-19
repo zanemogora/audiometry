@@ -27,16 +27,11 @@ function getComputerChoice(){
 //vyhra
 function win(userChoice, computerChoice){
     
-    userScore++;
-
-    localStorage.setItem("userscore", userScore);
-    localStorage.setItem("computerscore", computerScore);
-    var score = localStorage.getItem("userscore");
-    var score2 = localStorage.getItem("computerscore");
-    
+    score++;
     userScore_span.innerHTML = score;
     computerScore_span.innerHTML = score2;
-
+    localStorage.setItem("userscore", score);
+    localStorage.setItem("computerscore", score2);
 
     window.location.replace('vyhra11.html');
 
@@ -46,13 +41,11 @@ function win(userChoice, computerChoice){
 //prehra
 function lose(userChoice, computerChoice){
     
-    localStorage.setItem("userscore", userScore);
-    localStorage.setItem("computerscore", computerScore);
-    var score = localStorage.getItem("userscore");
-    var score2 = localStorage.getItem("computerscore");
-
+    score2++;
     userScore_span.innerHTML = score;
     computerScore_span.innerHTML = score2;
+    localStorage.setItem("userscore", score);
+    localStorage.setItem("computerscore", score2);
 
     
     window.location.replace('prehra11.html');

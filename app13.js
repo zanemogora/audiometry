@@ -5,9 +5,10 @@ const computerScore_span = document.getElementById("wrong-score");
 const score_Board = document.querySelector(".score-board");
 const result_p = document.querySelector(".result >p");
 
-const babika_place_div = document.getElementById("auto_auticko");
-const babika_div = document.getElementById("vlak_vlacik");
-const babika_spi_div = document.getElementById("banan_bananik");
+const cervene_auto_div = document.getElementById("ucho");
+const cervena_div = document.getElementById("vtak_vtacik");
+const jablko_jablcko_div = document.getElementById("zajac_zajacik");
+const kvet_kvietok_div = document.getElementById("ruka");
 
 const play_btn = document.getElementById("playbtn");
 const back_btn = document.getElementById("inner1");
@@ -27,8 +28,8 @@ computerScore_span.innerHTML = score6;
 
 //Nahodny vyber z nahravok
 function getComputerChoice(){
-    const choices =["auto_auticko_sound","vlak_vlacik_sound","banan_bananik_sound"];
-    const randomNumber = Math.floor(Math.random() * 3);
+    const choices =["ucho_sound","vtak_vtacik_sound","zajac_zajacik_sound", "ruka_sound"];
+    const randomNumber = Math.floor(Math.random() * 4);
     return choices[randomNumber];
 }
 
@@ -41,44 +42,42 @@ function win(userChoice, computerChoice){
     localStorage.setItem("userscore3", score5);
     localStorage.setItem("computerscore3", score6);
 
-    window.location.replace('vyhra8.html');
+    window.location.replace('vyhra13.html');
 
-    
 }
 
 //prehra
 function lose(userChoice, computerChoice){
-    
+
     score6++;
     userScore_span.innerHTML = score5;
     computerScore_span.innerHTML = score6;
     localStorage.setItem("userscore3", score5);
     localStorage.setItem("computerscore3", score6);
-    
-    window.location.replace('prehra8.html');
+  
+    window.location.replace('prehra13.html');
 
-   
 }
+
 
 //logika hry
 function game(userChoice, computerChoice){    
     
-    console.log("pouzivatel vybral =>" + userChoice);
-    console.log("pocitac vybral nahravku =>" + computerChoice);
+    //console.log("pouzivatel vybral =>" + userChoice);
+    //console.log("pocitac vybral nahravku =>" + computerChoice);
     
     switch (userChoice + computerChoice){
         
-        
-            case "auto_autickoauto_auticko_sound":
-            case "vlak_vlacikvlak_vlacik_sound":
-            case "banan_bananikbanan_bananik_sound":
+            case "uchoucho_sound":
+            case "vtak_vtacikvtak_vtacik_sound":
+            case "zajac_zajacikzajac_zajacik_sound":
+            case "rukaruka_sound":
                 win(userChoice, computerChoice);
                 break;
-            
+
             default:
                 lose(userChoice, computerChoice);
                 break;
-        
     }
 
 }
@@ -90,37 +89,61 @@ function main(){
 
 //funguje mi to tak ze vygenerujem premennu computerChoice o nejakej hodnote a drzim hodnotu aj pri zmene vstupu pouzivatela, este mi treba if (generovanahodnota) then zapni konkretny zvuk 
     
-    play_btn.addEventListener('click', function() {
-       if (computerChoice == 'auto_auticko_sound') {
-            var audio = new Audio('audio/2a_auto_autíčko.wav');
+
+    back_btn.addEventListener('click', function() {
+        console.log("STLACIL SI BACK");
+        
+        if (score5 > score_prve_user) {
+            score5--;
+            localStorage.setItem("userscore", score5);
+        }
+
+        if (score6 > score_prve_computer) {
+            score6--;
+            localStorage.setItem("computerscore", score6);
+        }
+
+        
+    })
+
+    playbtn.addEventListener('click', function() {
+       if (computerChoice == 'ucho_sound') {
+            var audio = new Audio('audio/44_ucho.wav');
             audio.play();
        }
 
-       if (computerChoice == 'vlak_vlacik_sound') {
-            var audio = new Audio('audio/4_vlak_vláčik.wav');
+       if (computerChoice == 'vtak_vtacik_sound') {
+            var audio = new Audio('audio/14_vták_vtáčik.wav');
             audio.play();
        }
 
-       if (computerChoice == 'banan_bananik_sound') {
-            var audio = new Audio('audio/47_banán_banánik.wav');
+       if (computerChoice == 'zajac_zajacik_sound') {
+            var audio = new Audio('audio/15_zajac_zajačik.wav');
             audio.play();
        }
 
+       if (computerChoice == 'ruka_sound') {
+            var audio = new Audio('audio/42a_ruka.wav');
+            audio.play();
+       }
     })
 
 
-    babika_place_div.addEventListener('click', function() {
-        game("auto_auticko", computerChoice);
+    cervene_auto_div.addEventListener('click', function() {
+        game("ucho", computerChoice);
     })
 
-    babika_div.addEventListener('click', function() {
-        game("vlak_vlacik", computerChoice);
+    cervena_div.addEventListener('click', function() {
+        game("vtak_vtacik", computerChoice);
     })
 
-    babika_spi_div.addEventListener('click', function() {
-        game("banan_bananik", computerChoice);
+    jablko_jablcko_div.addEventListener('click', function() {
+        game("zajac_zajacik", computerChoice);
     })
- 
+
+    kvet_kvietok_div.addEventListener('click', function() {
+        game("ruka", computerChoice);
+    }) 
 }
 
 main();

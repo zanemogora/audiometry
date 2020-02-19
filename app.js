@@ -9,7 +9,7 @@ const cervene_auto_div = document.getElementById("cervene_auto");
 const cervena_div = document.getElementById("cervena");
 const jablko_jablcko_div = document.getElementById("jablko_jablcko");
 const kvet_kvietok_div = document.getElementById("kvet_kvietok");
-//const playbutton_div = document.getElementById("playbutton3");
+
 const play_btn = document.getElementById("playbtn");
 
 var score = 0;
@@ -49,10 +49,6 @@ function lose(userChoice, computerChoice){
   
     window.location.replace('prehra.html');
 
-
-    /*result_p.innerHTML = "Nesprávna odpoveď.";   
-    var audio = new Audio('audio/losesound.mp3');
-    audio.play();*/  
 }
 
 

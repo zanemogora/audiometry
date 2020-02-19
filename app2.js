@@ -19,7 +19,6 @@ userScore_span.innerHTML = score3;
 computerScore_span.innerHTML = score4;
 
 
-
 //Nahodny vyber z nahravok
 function getComputerChoice(){
     const choices =["pes_psik_havo_sound","macka_a_pes_sound","macka_a_konik_sound", "macka_macicka_sound"];
