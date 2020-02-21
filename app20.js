@@ -5,10 +5,10 @@ const computerScore_span = document.getElementById("wrong-score");
 const score_Board = document.querySelector(".score-board");
 const result_p = document.querySelector(".result >p");
 
-const cervene_auto_div = document.getElementById("strom_stromcek");
-const cervena_div = document.getElementById("mys_myska");
-const jablko_jablcko_div = document.getElementById("postel_postielka");
-const kvet_kvietok_div = document.getElementById("banan_bananik");
+const cervene_auto_div = document.getElementById("auto_auticko");
+const cervena_div = document.getElementById("ruka");
+const jablko_jablcko_div = document.getElementById("chlieb_chlebik");
+const kvet_kvietok_div = document.getElementById("kon_konik");
 
 const play_btn = document.getElementById("playbtn");
 const back_btn = document.getElementById("inner1");
@@ -27,7 +27,7 @@ computerScore_span.innerHTML = score10;
 
 //Nahodny vyber z nahravok
 function getComputerChoice(){
-    const choices =["strom_stromcek_sound","mys_myska_sound","postel_postielka_sound", "banan_bananik_sound"];
+    const choices =["auto_auticko_sound","ruka_sound","chlieb_chlebik_sound", "kon_konik_sound"];
     const randomNumber = Math.floor(Math.random() * 4);
     return choices[randomNumber];
 }
@@ -67,10 +67,10 @@ function game(userChoice, computerChoice){
     
     switch (userChoice + computerChoice){
         
-            case "strom_stromcekstrom_stromcek_sound":
-            case "mys_myskamys_myska_sound":
-            case "postel_postielkapostel_postielka_sound":
-            case "banan_bananikbanan_bananik_sound":
+            case "auto_autickoauto_auticko_sound":
+            case "rukaruka_sound":
+            case "chlieb_chlebikchlieb_chlebik_sound":
+            case "kon_konikkon_konik_sound":
                 win(userChoice, computerChoice);
                 break;
 
@@ -105,42 +105,42 @@ function main(){
     })
 
     playbtn.addEventListener('click', function() {
-       if (computerChoice == 'strom_stromcek_sound') {
-            var audio = new Audio('audio/38_strom_stromček.wav');
+       if (computerChoice == 'auto_auticko_sound') {
+            var audio = new Audio('audio/2c_auto_autíčko.wav');
             audio.play();
        }
 
-       if (computerChoice == 'mys_myska_sound') {
-            var audio = new Audio('audio/19_myš_myška.wav');
+       if (computerChoice == 'ruka_sound') {
+            var audio = new Audio('audio/42b_ruka.wav');
             audio.play();
        }
 
-       if (computerChoice == 'postel_postielka_sound') {
-            var audio = new Audio('audio/39_posteľ_postieľka.wav');
+       if (computerChoice == 'chlieb_chlebik_sound') {
+            var audio = new Audio('audio/48_chlieb_chlebík.wav');
             audio.play();
        }
 
-       if (computerChoice == 'banan_bananik_sound') {
-            var audio = new Audio('audio/47_banán_banánik.wav');
+       if (computerChoice == 'kon_konik_sound') {
+            var audio = new Audio('audio/17_kôň_koník.wav');
             audio.play();
        }
     })
 
 
     cervene_auto_div.addEventListener('click', function() {
-        game("strom_stromcek", computerChoice);
+        game("auto_auticko", computerChoice);
     })
 
     cervena_div.addEventListener('click', function() {
-        game("'mys_myska", computerChoice);
+        game("ruka", computerChoice);
     })
 
     jablko_jablcko_div.addEventListener('click', function() {
-        game("postel_postielka", computerChoice);
+        game("chlieb_chlebik", computerChoice);
     })
 
     kvet_kvietok_div.addEventListener('click', function() {
-        game("banan_bananik", computerChoice);
+        game("kon_konik", computerChoice);
     }) 
 }
 
