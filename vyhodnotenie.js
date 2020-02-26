@@ -56,6 +56,7 @@ function myFunction(){
 
     if (parseInt(score58) > 15) {
         document.getElementById("demo").innerHTML = "Máte výborný sluch. (16-20 správnych odpovedí)";
+        
 
     }else if (parseInt(score58) < 16 && parseInt(score58) > 10){
         document.getElementById("demo2").innerHTML = "Váš sluch je v poriadku. (11-15 správnych odpovedí)";
