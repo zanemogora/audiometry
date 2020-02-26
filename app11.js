@@ -12,8 +12,8 @@ const babika_spi_div = document.getElementById("oci");
 //const playbutton_div = document.getElementById("playbutton3");
 const play_btn = document.getElementById("playbtn");
 
-var score = 0;
-var score2 = 0;
+var score20 = 0;
+var score21 = 0;
 
 
 
@@ -27,11 +27,11 @@ function getComputerChoice(){
 //vyhra
 function win(userChoice, computerChoice){
     
-    score++;
-    userScore_span.innerHTML = score;
-    computerScore_span.innerHTML = score2;
-    localStorage.setItem("userscore", score);
-    localStorage.setItem("computerscore", score2);
+    score20++;
+    userScore_span.innerHTML = score20;
+    computerScore_span.innerHTML = score21;
+    localStorage.setItem("userscore", score20);
+    localStorage.setItem("computerscore", score21);
 
     window.location.replace('vyhra11.html');
 
@@ -41,11 +41,11 @@ function win(userChoice, computerChoice){
 //prehra
 function lose(userChoice, computerChoice){
     
-    score2++;
-    userScore_span.innerHTML = score;
-    computerScore_span.innerHTML = score2;
-    localStorage.setItem("userscore", score);
-    localStorage.setItem("computerscore", score2);
+    score21++;
+    userScore_span.innerHTML = score20;
+    computerScore_span.innerHTML = score21;
+    localStorage.setItem("userscore", score20);
+    localStorage.setItem("computerscore", score21);
 
     
     window.location.replace('prehra11.html');

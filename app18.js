@@ -19,11 +19,11 @@ var score_prve_computer = localStorage.getItem("computerscore");
 console.log("User:Computer prve kolo =>" + score_prve_user,score_prve_computer);
 
 //kvoli dalsiemu inkrementovaniu score
-var score5 = localStorage.getItem("userscore2");
-var score6 = localStorage.getItem("computerscore2");
-console.log("User:Computer druhe kolo =>" + score5,score6);
-userScore_span.innerHTML = score5;
-computerScore_span.innerHTML = score6;
+var score34 = localStorage.getItem("userscore2");
+var score35 = localStorage.getItem("computerscore2");
+console.log("User:Computer druhe kolo =>" + score34,score35);
+userScore_span.innerHTML = score34;
+computerScore_span.innerHTML = score35;
 
 
 //Nahodny vyber z nahravok
@@ -36,11 +36,11 @@ function getComputerChoice(){
 //vyhra
 function win(userChoice, computerChoice){
     
-    score5++;
-    userScore_span.innerHTML = score5;
-    computerScore_span.innerHTML = score6;
-    localStorage.setItem("userscore3", score5);
-    localStorage.setItem("computerscore3", score6);
+    score34++;
+    userScore_span.innerHTML = score34;
+    computerScore_span.innerHTML = score35;
+    localStorage.setItem("userscore3", score34);
+    localStorage.setItem("computerscore3", score35);
 
     window.location.replace('vyhra18.html');
 
@@ -49,11 +49,11 @@ function win(userChoice, computerChoice){
 //prehra
 function lose(userChoice, computerChoice){
 
-    score6++;
-    userScore_span.innerHTML = score5;
-    computerScore_span.innerHTML = score6;
-    localStorage.setItem("userscore3", score5);
-    localStorage.setItem("computerscore3", score6);
+    score35++;
+    userScore_span.innerHTML = score34;
+    computerScore_span.innerHTML = score35;
+    localStorage.setItem("userscore3", score34);
+    localStorage.setItem("computerscore3", score35);
   
     window.location.replace('prehra18.html');
 
@@ -93,14 +93,14 @@ function main(){
     back_btn.addEventListener('click', function() {
         console.log("STLACIL SI BACK");
         
-        if (score5 > score_prve_user) {
-            score5--;
-            localStorage.setItem("userscore", score5);
+        if (score34 > score_prve_user) {
+            score34--;
+            localStorage.setItem("userscore", score34);
         }
 
-        if (score6 > score_prve_computer) {
-            score6--;
-            localStorage.setItem("computerscore", score6);
+        if (score35 > score_prve_computer) {
+            score35--;
+            localStorage.setItem("computerscore", score35);
         }
 
         

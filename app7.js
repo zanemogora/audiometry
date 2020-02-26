@@ -12,10 +12,10 @@ const autobus_div = document.getElementById("kvet_kvietok");
 
 const play_btn = document.getElementById("playbtn");
 
-var score3 = localStorage.getItem("userscore");
-var score4 = localStorage.getItem("computerscore");
-userScore_span.innerHTML = score3;
-computerScore_span.innerHTML = score4;
+var score12 = localStorage.getItem("userscore");
+var score13 = localStorage.getItem("computerscore");
+userScore_span.innerHTML = score12;
+computerScore_span.innerHTML = score13;
 
 
 //Nahodny vyber z nahravok
@@ -28,11 +28,11 @@ function getComputerChoice(){
 //vyhra
 function win(userChoice, computerChoice){
     
-    score3++;
-    userScore_span.innerHTML = score3;
-    computerScore_span.innerHTML = score4;
-    localStorage.setItem("userscore2", score3);
-    localStorage.setItem("computerscore2", score4);
+    score12++;
+    userScore_span.innerHTML = score12;
+    computerScore_span.innerHTML = score13;
+    localStorage.setItem("userscore2", score12);
+    localStorage.setItem("computerscore2", score13);
 
     window.location.replace('vyhra7.html');
 
@@ -42,11 +42,11 @@ function win(userChoice, computerChoice){
 //prehra
 function lose(userChoice, computerChoice){
     
-    score4++;
-    userScore_span.innerHTML = score3;
-    computerScore_span.innerHTML = score4;
-    localStorage.setItem("userscore2", score3);
-    localStorage.setItem("computerscore2", score4);
+    score13++;
+    userScore_span.innerHTML = score12;
+    computerScore_span.innerHTML = score13;
+    localStorage.setItem("userscore2", score12);
+    localStorage.setItem("computerscore2", score13);
     
     window.location.replace('prehra7.html');
 

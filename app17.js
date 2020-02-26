@@ -12,10 +12,10 @@ const babika_spi_div = document.getElementById("kvet_kvietok");
 const play_btn = document.getElementById("playbtn");
 
 //kvoli dalsiemu inkrementovaniu score
-var score3 = localStorage.getItem("userscore");
-var score4 = localStorage.getItem("computerscore");
-userScore_span.innerHTML = score3;
-computerScore_span.innerHTML = score4;
+var score32 = localStorage.getItem("userscore");
+var score33 = localStorage.getItem("computerscore");
+userScore_span.innerHTML = score32;
+computerScore_span.innerHTML = score33;
 
 
 
@@ -29,11 +29,11 @@ function getComputerChoice(){
 //vyhra
 function win(userChoice, computerChoice){
     
-    score3++;
-    userScore_span.innerHTML = score3;
-    computerScore_span.innerHTML = score4;
-    localStorage.setItem("userscore2", score3);
-    localStorage.setItem("computerscore2", score4);
+    score32++;
+    userScore_span.innerHTML = score32;
+    computerScore_span.innerHTML = score33;
+    localStorage.setItem("userscore2", score32);
+    localStorage.setItem("computerscore2", score33);
 
     window.location.replace('vyhra17.html');
 
@@ -43,11 +43,11 @@ function win(userChoice, computerChoice){
 //prehra
 function lose(userChoice, computerChoice){
     
-    score4++;
-    userScore_span.innerHTML = score3;
-    computerScore_span.innerHTML = score4;
-    localStorage.setItem("userscore2", score3);
-    localStorage.setItem("computerscore2", score4);
+    score33++;
+    userScore_span.innerHTML = score32;
+    computerScore_span.innerHTML = score33;
+    localStorage.setItem("userscore2", score32);
+    localStorage.setItem("computerscore2", score33);
     
     window.location.replace('prehra17.html');
 

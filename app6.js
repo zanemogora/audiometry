@@ -12,8 +12,8 @@ const autobus_div = document.getElementById("dzus_dzusik");
 
 const play_btn = document.getElementById("playbtn");
 
-var score = 0;
-var score2 = 0;
+var score10 = 0;
+var score11 = 0;
 
 //Nahodny vyber z nahravok
 function getComputerChoice(){
@@ -25,11 +25,11 @@ function getComputerChoice(){
 //vyhra
 function win(userChoice, computerChoice){
     
-    score++;
-    userScore_span.innerHTML = score;
-    computerScore_span.innerHTML = score2;
-    localStorage.setItem("userscore", score);
-    localStorage.setItem("computerscore", score2);
+    score10++;
+    userScore_span.innerHTML = score10;
+    computerScore_span.innerHTML = score11;
+    localStorage.setItem("userscore", score10);
+    localStorage.setItem("computerscore", score11);
 
     window.location.replace('vyhra6.html');
 
@@ -39,11 +39,11 @@ function win(userChoice, computerChoice){
 //prehra
 function lose(userChoice, computerChoice){
     
-    score2++;
-    userScore_span.innerHTML = score;
-    computerScore_span.innerHTML = score2;
-    localStorage.setItem("userscore", score);
-    localStorage.setItem("computerscore", score2);
+    score11++;
+    userScore_span.innerHTML = score10;
+    computerScore_span.innerHTML = score11;
+    localStorage.setItem("userscore", score10);
+    localStorage.setItem("computerscore", score11);
 
     window.location.replace('prehra6.html');
 

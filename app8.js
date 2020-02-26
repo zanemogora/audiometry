@@ -18,11 +18,11 @@ var score_prve_computer = localStorage.getItem("computerscore");
 console.log("User:Computer prve kolo =>" + score_prve_user,score_prve_computer);
 
 //kvoli dalsiemu inkrementovaniu score
-var score5 = localStorage.getItem("userscore2");
-var score6 = localStorage.getItem("computerscore2");
-console.log("User:Computer druhe kolo =>" + score5,score6);
-userScore_span.innerHTML = score5;
-computerScore_span.innerHTML = score6;
+var score14 = localStorage.getItem("userscore2");
+var score15 = localStorage.getItem("computerscore2");
+console.log("User:Computer druhe kolo =>" + score14,score15);
+userScore_span.innerHTML = score14;
+computerScore_span.innerHTML = score15;
 
 
 //Nahodny vyber z nahravok
@@ -35,11 +35,11 @@ function getComputerChoice(){
 //vyhra
 function win(userChoice, computerChoice){
     
-    score5++;
-    userScore_span.innerHTML = score5;
-    computerScore_span.innerHTML = score6;
-    localStorage.setItem("userscore3", score5);
-    localStorage.setItem("computerscore3", score6);
+    score14++;
+    userScore_span.innerHTML = score14;
+    computerScore_span.innerHTML = score15;
+    localStorage.setItem("userscore3", score14);
+    localStorage.setItem("computerscore3", score15);
 
     window.location.replace('vyhra8.html');
 
@@ -49,11 +49,11 @@ function win(userChoice, computerChoice){
 //prehra
 function lose(userChoice, computerChoice){
     
-    score6++;
-    userScore_span.innerHTML = score5;
-    computerScore_span.innerHTML = score6;
-    localStorage.setItem("userscore3", score5);
-    localStorage.setItem("computerscore3", score6);
+    score15++;
+    userScore_span.innerHTML = score14;
+    computerScore_span.innerHTML = score15;
+    localStorage.setItem("userscore3", score14);
+    localStorage.setItem("computerscore3", score15);
     
     window.location.replace('prehra8.html');
 
