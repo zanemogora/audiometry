@@ -55,14 +55,14 @@ computerScore_span6.innerHTML = score59;
 function myFunction(){
 
     if (parseInt(score58) > 15) {
-        document.getElementById("demo").innerHTML = "Máte výborný sluch. (16-20 správnych odpovedí)";
+        document.getElementById("demo").innerHTML = "Máte výborný sluch.(16-20 správnych odpovedí) ಠ‿↼";
         
 
     }else if (parseInt(score58) < 16 && parseInt(score58) > 10){
-        document.getElementById("demo2").innerHTML = "Váš sluch je v poriadku. (11-15 správnych odpovedí)";
+        document.getElementById("demo2").innerHTML = "Váš sluch je v poriadku.(11-15 správnych odpovedí) ʘ‿ʘ";
 
     }else {
-        document.getElementById("demo3").innerHTML = "Váš sluch nie je v dobrej kondícii. (0-10 správnych odpovedí) ";
+        document.getElementById("demo3").innerHTML = "Váš sluch nie je v dobrej kondícii.(0-10 správnych odpovedí) ಠ~ಠ";
 
     }
 
