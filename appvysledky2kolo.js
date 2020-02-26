@@ -3,8 +3,8 @@ const computerScore_span = document.getElementById("wrong-score");
 
 var score19 = localStorage.getItem("userscore5");
 var score20 = localStorage.getItem("computerscore5");
-userScore_span.innerHTML = score9;
-computerScore_span.innerHTML = score10;
+userScore_span.innerHTML = score19;
+computerScore_span.innerHTML = score20;
 
 
 function main(){

@@ -1,4 +1,3 @@
-
 const userScore_span = document.getElementById("correct-score");
 const computerScore_span = document.getElementById("wrong-score");
 
