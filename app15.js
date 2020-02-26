@@ -14,13 +14,13 @@ const play_btn = document.getElementById("playbtn");
 const back_btn = document.getElementById("inner1");
 
 //kvoli tlacidlu back, aby vedel rozoznat program body v kolach
-var score_tretie_user = localStorage.getItem("userscore3");
-var score_tretie_computer = localStorage.getItem("computerscore3");
+var score_tretie_user = localStorage.getItem("userscore13");
+var score_tretie_computer = localStorage.getItem("computerscore13");
 console.log("User:Computer tretie kolo =>" + score_tretie_user,score_tretie_computer);
 
 //kvoli dalsiemu inkrementovaniu score
-var score28 = localStorage.getItem("userscore4");
-var score29 = localStorage.getItem("computerscore4");
+var score28 = localStorage.getItem("userscore14");
+var score29 = localStorage.getItem("computerscore14");
 console.log("User:Computer stvrte kolo =>" + score28,score29);
 userScore_span.innerHTML = score28;
 computerScore_span.innerHTML = score29;
@@ -38,8 +38,8 @@ function win(userChoice, computerChoice){
     score28++;
     userScore_span.innerHTML = score28;
     computerScore_span.innerHTML = score29;
-    localStorage.setItem("userscore5", score28);
-    localStorage.setItem("computerscore5", score29);
+    localStorage.setItem("userscore15", score28);
+    localStorage.setItem("computerscore15", score29);
 
     window.location.replace('vyhra15.html');
 
@@ -51,8 +51,8 @@ function lose(userChoice, computerChoice){
     score29++;
     userScore_span.innerHTML = score28;
     computerScore_span.innerHTML = score29;
-    localStorage.setItem("userscore5", score28);
-    localStorage.setItem("computerscore5", score29);
+    localStorage.setItem("userscore15", score28);
+    localStorage.setItem("computerscore15", score29);
   
     window.location.replace('prehra15.html');
 
@@ -132,7 +132,7 @@ function main(){
     })
 
     cervena_div.addEventListener('click', function() {
-        game("'mys_myska", computerChoice);
+        game("mys_myska", computerChoice);
     })
 
     jablko_jablcko_div.addEventListener('click', function() {

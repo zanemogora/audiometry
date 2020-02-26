@@ -14,13 +14,13 @@ const play_btn = document.getElementById("playbtn");
 const back_btn = document.getElementById("inner1");
 
 //kvoli tlacidlu back, aby vedel rozoznat program body v kolach
-var score_tretie_user = localStorage.getItem("userscore3");
-var score_tretie_computer = localStorage.getItem("computerscore3");
+var score_tretie_user = localStorage.getItem("userscore18");
+var score_tretie_computer = localStorage.getItem("computerscore18");
 console.log("User:Computer tretie kolo =>" + score_tretie_user,score_tretie_computer);
 
 //kvoli dalsiemu inkrementovaniu score
-var score38 = localStorage.getItem("userscore4");
-var score39 = localStorage.getItem("computerscore4");
+var score38 = localStorage.getItem("userscore19");
+var score39 = localStorage.getItem("computerscore19");
 console.log("User:Computer stvrte kolo =>" + score38,score39);
 userScore_span.innerHTML = score38;
 computerScore_span.innerHTML = score39;
@@ -38,8 +38,8 @@ function win(userChoice, computerChoice){
     score38++;
     userScore_span.innerHTML = score38;
     computerScore_span.innerHTML = score39;
-    localStorage.setItem("userscore5", score38);
-    localStorage.setItem("computerscore5", score39);
+    localStorage.setItem("userscore20", score38);
+    localStorage.setItem("computerscore20", score39);
 
     window.location.replace('vyhra20.html');
 
@@ -51,8 +51,8 @@ function lose(userChoice, computerChoice){
     score39++;
     userScore_span.innerHTML = score38;
     computerScore_span.innerHTML = score39;
-    localStorage.setItem("userscore5", score38);
-    localStorage.setItem("computerscore5", score39);
+    localStorage.setItem("userscore20", score38);
+    localStorage.setItem("computerscore20", score39);
   
     window.location.replace('prehra20.html');
 

@@ -12,8 +12,8 @@ const autobus_div = document.getElementById("kvet_kvietok");
 
 const play_btn = document.getElementById("playbtn");
 
-var score12 = localStorage.getItem("userscore");
-var score13 = localStorage.getItem("computerscore");
+var score12 = localStorage.getItem("userscore6");
+var score13 = localStorage.getItem("computerscore6");
 userScore_span.innerHTML = score12;
 computerScore_span.innerHTML = score13;
 
@@ -31,8 +31,8 @@ function win(userChoice, computerChoice){
     score12++;
     userScore_span.innerHTML = score12;
     computerScore_span.innerHTML = score13;
-    localStorage.setItem("userscore2", score12);
-    localStorage.setItem("computerscore2", score13);
+    localStorage.setItem("userscore7", score12);
+    localStorage.setItem("computerscore7", score13);
 
     window.location.replace('vyhra7.html');
 
@@ -45,8 +45,8 @@ function lose(userChoice, computerChoice){
     score13++;
     userScore_span.innerHTML = score12;
     computerScore_span.innerHTML = score13;
-    localStorage.setItem("userscore2", score12);
-    localStorage.setItem("computerscore2", score13);
+    localStorage.setItem("userscore7", score12);
+    localStorage.setItem("computerscore7", score13);
     
     window.location.replace('prehra7.html');
 

@@ -28,8 +28,8 @@ function win(userChoice, computerChoice){
     score10++;
     userScore_span.innerHTML = score10;
     computerScore_span.innerHTML = score11;
-    localStorage.setItem("userscore", score10);
-    localStorage.setItem("computerscore", score11);
+    localStorage.setItem("userscore6", score10);
+    localStorage.setItem("computerscore6", score11);
 
     window.location.replace('vyhra6.html');
 
@@ -42,8 +42,8 @@ function lose(userChoice, computerChoice){
     score11++;
     userScore_span.innerHTML = score10;
     computerScore_span.innerHTML = score11;
-    localStorage.setItem("userscore", score10);
-    localStorage.setItem("computerscore", score11);
+    localStorage.setItem("userscore6", score10);
+    localStorage.setItem("computerscore6", score11);
 
     window.location.replace('prehra6.html');
 
