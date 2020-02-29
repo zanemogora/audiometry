@@ -83,6 +83,23 @@ function game(userChoice, computerChoice){
 
 }
 
+function playFunc(target, RepeatCount) {
+    playbtn.disabled=true;
+     var soundFunc = function(){
+        RepeatCount--;
+        target.currentTime = 0;
+        if (RepeatCount>0)
+            target.play();
+        else{
+           target.removeEventListener('ended', soundFunc);
+            playbtn.disabled=false;
+        }
+    
+    }
+    target.addEventListener('ended', soundFunc)
+    target.play();
+} 
+
 //akcie pri kliknuti na obrazky
 function main(){
     const computerChoice=getComputerChoice();
@@ -111,16 +128,43 @@ function main(){
        if (computerChoice == 'babika_place_sound') {
             var audio = new Audio('audio/25_bábika plače.wav');
             audio.play();
+            if (!audio.paused || audio.currentTime) {
+                console.log("block");
+                document.getElementById("playbtn").disabled = true;
+            } else if (audio.paused) {
+                console.log("unblock");
+
+                document.getElementById("playbtn").disabled = false;
+            }
+            playFunc(audio, 1);
        }
 
        if (computerChoice == 'babika_sound') {
             var audio = new Audio('audio/34_bábika.wav');
             audio.play();
+            if (!audio.paused || audio.currentTime) {
+                console.log("block");
+                document.getElementById("playbtn").disabled = true;
+            } else if (audio.paused) {
+                console.log("unblock");
+
+                document.getElementById("playbtn").disabled = false;
+            }
+            playFunc(audio, 1);
        }
 
        if (computerChoice == 'babika_spi_sound') {
             var audio = new Audio('audio/24_bábika spí.wav');
             audio.play();
+            if (!audio.paused || audio.currentTime) {
+                console.log("block");
+                document.getElementById("playbtn").disabled = true;
+            } else if (audio.paused) {
+                console.log("unblock");
+
+                document.getElementById("playbtn").disabled = false;
+            }
+            playFunc(audio, 1);
        }
 
     })

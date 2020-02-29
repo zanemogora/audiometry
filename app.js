@@ -91,7 +91,7 @@ function playFunc(target, RepeatCount) {
         }
         target.addEventListener('ended', soundFunc)
         target.play();
-    } 
+} 
 
 
 //akcie pri kliknuti na obrazky

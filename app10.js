@@ -83,6 +83,23 @@ function game(userChoice, computerChoice){
 
 }
 
+function playFunc(target, RepeatCount) {
+    playbtn.disabled=true;
+     var soundFunc = function(){
+        RepeatCount--;
+        target.currentTime = 0;
+        if (RepeatCount>0)
+            target.play();
+        else{
+           target.removeEventListener('ended', soundFunc);
+            playbtn.disabled=false;
+        }
+    
+    }
+    target.addEventListener('ended', soundFunc)
+    target.play();
+} 
+
 //akcie pri kliknuti na obrazky
 function main(){
     const computerChoice=getComputerChoice();
@@ -95,16 +112,43 @@ function main(){
        if (computerChoice == 'strom_stromcek_sound') {
             var audio = new Audio('audio/38_strom_stromček.wav');
             audio.play();
+            if (!audio.paused || audio.currentTime) {
+                console.log("block");
+                document.getElementById("playbtn").disabled = true;
+            } else if (audio.paused) {
+                console.log("unblock");
+
+                document.getElementById("playbtn").disabled = false;
+            }
+            playFunc(audio, 1);
        }
 
        if (computerChoice == 'postel_postielka_sound') {
             var audio = new Audio('audio/39_posteľ_postieľka.wav');
             audio.play();
+            if (!audio.paused || audio.currentTime) {
+                console.log("block");
+                document.getElementById("playbtn").disabled = true;
+            } else if (audio.paused) {
+                console.log("unblock");
+
+                document.getElementById("playbtn").disabled = false;
+            }
+            playFunc(audio, 1);
        }
 
        if (computerChoice == 'chlieb_chlebik_sound') {
             var audio = new Audio('audio/48_chlieb_chlebík.wav');
             audio.play();
+            if (!audio.paused || audio.currentTime) {
+                console.log("block");
+                document.getElementById("playbtn").disabled = true;
+            } else if (audio.paused) {
+                console.log("unblock");
+
+                document.getElementById("playbtn").disabled = false;
+            }
+            playFunc(audio, 1);
        }
 
     })

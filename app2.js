@@ -78,6 +78,25 @@ function game(userChoice, computerChoice){
 
 }
 
+function playFunc(target, RepeatCount) {
+    playbtn.disabled=true;
+     var soundFunc = function(){
+        RepeatCount--;
+        target.currentTime = 0;
+        if (RepeatCount>0)
+            target.play();
+        else{
+           target.removeEventListener('ended', soundFunc);
+            playbtn.disabled=false;
+        }
+    
+    }
+    target.addEventListener('ended', soundFunc)
+    target.play();
+} 
+
+
+
 //akcie pri kliknuti na obrazky
 function main(){
     const computerChoice=getComputerChoice();
@@ -92,21 +111,57 @@ play_btn.addEventListener('click', function() {
        if (computerChoice == 'pes_psik_havo_sound') {
             var audio = new Audio('audio/11a_pes_psík_havo.wav');
             audio.play();
+            if (!audio.paused || audio.currentTime) {
+                console.log("block");
+                document.getElementById("playbtn").disabled = true;
+            } else if (audio.paused) {
+                console.log("unblock");
+
+                document.getElementById("playbtn").disabled = false;
+            }
+            playFunc(audio, 1);
        }
 
        if (computerChoice == 'macka_a_pes_sound') {
             var audio = new Audio('audio/30_mačka a pes.wav');
             audio.play();
+            if (!audio.paused || audio.currentTime) {
+                console.log("block");
+                document.getElementById("playbtn").disabled = true;
+            } else if (audio.paused) {
+                console.log("unblock");
+
+                document.getElementById("playbtn").disabled = false;
+            }
+            playFunc(audio, 1);
        }
 
        if (computerChoice == 'macka_a_konik_sound') {
             var audio = new Audio('audio/32_mačka a koník.wav');
             audio.play();
+            if (!audio.paused || audio.currentTime) {
+                console.log("block");
+                document.getElementById("playbtn").disabled = true;
+            } else if (audio.paused) {
+                console.log("unblock");
+
+                document.getElementById("playbtn").disabled = false;
+            }
+            playFunc(audio, 1);
        }
 
        if (computerChoice == 'macka_macicka_sound') {
             var audio = new Audio('audio/10_mačka_mačička.wav');
             audio.play();
+            if (!audio.paused || audio.currentTime) {
+                console.log("block");
+                document.getElementById("playbtn").disabled = true;
+            } else if (audio.paused) {
+                console.log("unblock");
+
+                document.getElementById("playbtn").disabled = false;
+            }
+            playFunc(audio, 1);
        }
 })
 

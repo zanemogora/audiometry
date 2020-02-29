@@ -81,6 +81,23 @@ function game(userChoice, computerChoice){
 
 }
 
+function playFunc(target, RepeatCount) {
+    playbtn.disabled=true;
+     var soundFunc = function(){
+        RepeatCount--;
+        target.currentTime = 0;
+        if (RepeatCount>0)
+            target.play();
+        else{
+           target.removeEventListener('ended', soundFunc);
+            playbtn.disabled=false;
+        }
+    
+    }
+    target.addEventListener('ended', soundFunc)
+    target.play();
+} 
+
 //akcie pri kliknuti na obrazky
 function main(){
     const computerChoice=getComputerChoice();
@@ -108,21 +125,57 @@ function main(){
        if (computerChoice == 'auto_auticko_sound') {
             var audio = new Audio('audio/2c_auto_autíčko.wav');
             audio.play();
+            if (!audio.paused || audio.currentTime) {
+                console.log("block");
+                document.getElementById("playbtn").disabled = true;
+            } else if (audio.paused) {
+                console.log("unblock");
+
+                document.getElementById("playbtn").disabled = false;
+            }
+            playFunc(audio, 1);
        }
 
        if (computerChoice == 'ruka_sound') {
             var audio = new Audio('audio/42b_ruka.wav');
             audio.play();
+            if (!audio.paused || audio.currentTime) {
+                console.log("block");
+                document.getElementById("playbtn").disabled = true;
+            } else if (audio.paused) {
+                console.log("unblock");
+
+                document.getElementById("playbtn").disabled = false;
+            }
+            playFunc(audio, 1);
        }
 
        if (computerChoice == 'chlieb_chlebik_sound') {
             var audio = new Audio('audio/48_chlieb_chlebík.wav');
             audio.play();
+            if (!audio.paused || audio.currentTime) {
+                console.log("block");
+                document.getElementById("playbtn").disabled = true;
+            } else if (audio.paused) {
+                console.log("unblock");
+
+                document.getElementById("playbtn").disabled = false;
+            }
+            playFunc(audio, 1);
        }
 
        if (computerChoice == 'kon_konik_sound') {
             var audio = new Audio('audio/17_kôň_koník.wav');
             audio.play();
+            if (!audio.paused || audio.currentTime) {
+                console.log("block");
+                document.getElementById("playbtn").disabled = true;
+            } else if (audio.paused) {
+                console.log("unblock");
+
+                document.getElementById("playbtn").disabled = false;
+            }
+            playFunc(audio, 1);
        }
     })
 
