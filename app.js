@@ -75,32 +75,96 @@ function game(userChoice, computerChoice){
 
 }
 
+
+function playFunc(target, RepeatCount) {
+        playbtn.disabled=true;
+         var soundFunc = function(){
+            RepeatCount--;
+            target.currentTime = 0;
+            if (RepeatCount>0)
+                target.play();
+            else{
+               target.removeEventListener('ended', soundFunc);
+                playbtn.disabled=false;
+            }
+        
+        }
+        target.addEventListener('ended', soundFunc)
+        target.play();
+    } 
+
+
 //akcie pri kliknuti na obrazky
 function main(){
     const computerChoice=getComputerChoice();
     console.log("Computer choice =>" + computerChoice);
 
 //funguje mi to tak ze vygenerujem premennu computerChoice o nejakej hodnote a drzim hodnotu aj pri zmene vstupu pouzivatela, este mi treba if (generovanahodnota) then zapni konkretny zvuk 
-    
+
     playbtn.addEventListener('click', function() {
        if (computerChoice == 'cervene_auto_sound') {
             var audio = new Audio('audio/28_červené auto.wav');
             audio.play();
+            
+           if (!audio.paused || audio.currentTime) {
+                console.log("block");
+                document.getElementById("playbtn").disabled = true;
+            } else if (audio.paused) {
+                console.log("unblock");
+
+                document.getElementById("playbtn").disabled = false;
+            }
+            playFunc(audio, 1);
+
+
        }
 
        if (computerChoice == 'cervena_sound') {
             var audio = new Audio('audio/6_červená.wav');
             audio.play();
+
+            if (!audio.paused || audio.currentTime) {
+                console.log("block");
+                document.getElementById("playbtn").disabled = true;
+            } else if (audio.paused) {
+                console.log("unblock");
+
+                document.getElementById("playbtn").disabled = false;
+            }
+            playFunc(audio, 1);
+
        }
 
        if (computerChoice == 'jablko_jablcko_sound') {
             var audio = new Audio('audio/46_jablko_jabĺčko.wav');
             audio.play();
+
+            if (!audio.paused || audio.currentTime) {
+                console.log("block");
+                document.getElementById("playbtn").disabled = true;
+            } else if (audio.paused) {
+                console.log("unblock");
+
+                document.getElementById("playbtn").disabled = false;
+            }
+            playFunc(audio, 1);
+
        }
 
        if (computerChoice == 'kvet_kvietok_sound') {
             var audio = new Audio('audio/37_kvietok.wav');
             audio.play();
+
+            if (!audio.paused || audio.currentTime) {
+                console.log("block");
+                document.getElementById("playbtn").disabled = true;
+            } else if (audio.paused) {
+                console.log("unblock");
+
+                document.getElementById("playbtn").disabled = false;
+            }
+            playFunc(audio, 1);
+
        }
     })
 
