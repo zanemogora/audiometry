@@ -35,6 +35,7 @@ function main(){
             playFunc(audio, 1);
             
     })
+    
 }
 
 main();
