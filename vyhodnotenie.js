@@ -71,19 +71,27 @@ computerScore_span6.innerHTML = score59;
 
 function myFunction(){
 
-    if (parseInt(score58) > 15) {
-        document.getElementById("demo").innerHTML = "Máte výborný sluch.(16-20 správnych odpovedí) ಠ‿↼";
-        
+var number2 = 25;
+var percentage = Math.floor((parseInt(score58) / number2) * 100);
 
-    }else if (parseInt(score58) < 16 && parseInt(score58) > 10){
-        document.getElementById("demo2").innerHTML = "Váš sluch je v poriadku.(11-15 správnych odpovedí) ʘ‿ʘ";
+
+    if (percentage >= 80) {
+        document.getElementById("demo1").innerHTML = "Dosiahli ste " + percentage + "%" + " správnych odpovedí.";
+        document.getElementById("demo2").innerHTML = "Máte výborný sluch (>80%). ಠ‿↼";
+
+    }else if (percentage < 80 && percentage >= 50){
+        document.getElementById("demo1").innerHTML = "Dosiahli ste " + percentage + "%" + " správnych odpovedí.";
+        document.getElementById("demo2").innerHTML = "Váš sluch je v poriadku (50-80%). ʘ‿ʘ";
 
     }else {
-        document.getElementById("demo3").innerHTML = "Váš sluch nie je v dobrej kondícii.(0-10 správnych odpovedí) ಠ~ಠ";
-
+        document.getElementById("demo1").innerHTML = "Dosiahli ste " + percentage + "%" + " správnych odpovedí.";
+        document.getElementById("demo2").innerHTML = "Váš sluch nie je v dobrej kondícii (<50%). ಠ~ಠ";
     }
 
 }
+
+
+
 
 
 function main(){
