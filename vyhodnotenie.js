@@ -61,8 +61,8 @@ computerScore_span5.innerHTML = score49;
 const userScore_span6 = document.getElementById("correct-score6");
 const computerScore_span6 = document.getElementById("wrong-score6");
 
-var score58 = parseInt(score9) + parseInt(score19) + parseInt(score28) + parseInt(score38);
-var score59 = parseInt(score10) + parseInt(score20) + parseInt(score29) + parseInt(score39);
+var score58 = parseInt(score9) + parseInt(score19) + parseInt(score28) + parseInt(score38) + parseInt(score48);
+var score59 = parseInt(score10) + parseInt(score20) + parseInt(score29) + parseInt(score39) + parseInt(score49);
 userScore_span6.innerHTML = score58;
 computerScore_span6.innerHTML = score59;
 
