@@ -28,7 +28,7 @@ function getComputerChoice(){
 //vyhra
 function win(userChoice, computerChoice){
     
-    score30++;
+    score40++;
     userScore_span.innerHTML = score40;
     computerScore_span.innerHTML = score41;
     localStorage.setItem("userscore21", score40);
@@ -42,7 +42,7 @@ function win(userChoice, computerChoice){
 //prehra
 function lose(userChoice, computerChoice){
     
-    score31++;
+    score41++;
     userScore_span.innerHTML = score40;
     computerScore_span.innerHTML = score41;
     localStorage.setItem("userscore21", score40);
