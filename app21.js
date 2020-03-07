@@ -6,7 +6,7 @@ const score_Board = document.querySelector(".score-board");
 const result_p = document.querySelector(".result >p");
 
 const babika_place_div = document.getElementById("strom_stromcek");
-const babika_div = document.getElementById("vtak_vtacik_sound");
+const babika_div = document.getElementById("vtak_vtacik");
 const babika_spi_div = document.getElementById("zajac_zajacik");
 const oci_div = document.getElementById("oci");
 
