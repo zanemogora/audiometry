@@ -34,22 +34,7 @@
   box-shadow: 0 9px #999;
 }
 
-.button3 {
-  padding: 50px 50px;
-  font-size: 40px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  display: inline-block;/*centrovanie tlacidla 1.riadok*/
-  margin: auto;/*centrovanie tlacidla 2.riadok*/
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: rgb(255, 255, 255);
-  background-color: rgb(201, 30, 30);
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
+
 
 .button:hover {background-color: #3e8e41}
 
