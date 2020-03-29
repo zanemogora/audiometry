@@ -34,8 +34,6 @@ function win(userChoice, computerChoice){
 
     window.location.replace('vyhra.html');
 
-
-
 }
 
 //prehra
