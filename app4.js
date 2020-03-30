@@ -187,18 +187,26 @@ function main(){
 
     modre_auto_div.addEventListener('click', function() {
         game("modre_auto", computerChoice);
+        document.getElementById("modre_auto").disabled = true;
+
     })
 
     bicykel_div.addEventListener('click', function() {
         game("bicykel", computerChoice);
+        document.getElementById("bicykel").disabled = true;
+
     })
 
     lietadlo_lietadielko_div.addEventListener('click', function() {
         game("lietadlo_lietadielko", computerChoice);
+        document.getElementById("lietadlo_lietadielko").disabled = true;
+
     })
 
     autobus_div.addEventListener('click', function() {
         game("autobus", computerChoice);
+        document.getElementById("autobus").disabled = true;
+
     })
 
     

@@ -153,10 +153,14 @@ function main(){
 
     vlak_vlacik_div.addEventListener('click', function() {
         game("vlak_vlacik", computerChoice);
+        document.getElementById("vlak_vlacik").disabled = true;
+
     })
 
     vtak_vtacik_div.addEventListener('click', function() {
         game("vtak_vtacik", computerChoice);
+        document.getElementById("vtak_vtacik").disabled = true;
+
     })
 
 }

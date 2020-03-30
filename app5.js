@@ -171,14 +171,20 @@ function main(){
 
     babika_place_div.addEventListener('click', function() {
         game("babika_place", computerChoice);
+        document.getElementById("babika_place").disabled = true;
+
     })
 
     babika_div.addEventListener('click', function() {
         game("babika", computerChoice);
+        document.getElementById("babika").disabled = true;
+
     })
 
     babika_spi_div.addEventListener('click', function() {
         game("babika_spi", computerChoice);
+        document.getElementById("babika_spi").disabled = true;
+
     })
  
 }

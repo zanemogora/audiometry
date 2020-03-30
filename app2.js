@@ -167,18 +167,26 @@ play_btn.addEventListener('click', function() {
 
     pes_psik_havo_div.addEventListener('click', function() {
         game("pes_psik_havo", computerChoice);
+        document.getElementById("pes_psik_havo").disabled = true;
+
     })
 
     macka_a_pes_div.addEventListener('click', function() {
         game("macka_a_pes", computerChoice);
+        document.getElementById("macka_a_pes").disabled = true;
+
     })
 
     macka_a_konik_div.addEventListener('click', function() {
         game("macka_a_konik", computerChoice);
+        document.getElementById("macka_a_konik").disabled = true;
+
     })
 
     macka_macicka_div.addEventListener('click', function() {
         game("macka_macicka", computerChoice);
+        document.getElementById("macka_macicka").disabled = true;
+
     })
 
     
