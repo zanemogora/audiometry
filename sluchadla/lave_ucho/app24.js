@@ -1,5 +1,4 @@
-let userScore = 0;
-let computerScore = 0;
+
 const userScore_span = document.getElementById("correct-score");
 const computerScore_span = document.getElementById("wrong-score");
 const score_Board = document.querySelector(".score-board");
@@ -105,7 +104,7 @@ function main(){
 
 //funguje mi to tak ze vygenerujem premennu computerChoice o nejakej hodnote a drzim hodnotu aj pri zmene vstupu pouzivatela, este mi treba if (generovanahodnota) then zapni konkretny zvuk 
     
-    back_btn.addEventListener('click', function() {
+  /*  back_btn.addEventListener('click', function() {
         console.log("STLACIL SI BACK");
         
         if (score45 > score_druhe_user) {
@@ -120,7 +119,7 @@ function main(){
 
         
     })
-
+*/
     playbtn.addEventListener('click', function() {
        if (computerChoice == 'medved_maco_sound') {
             var audio = new Audio('audio/13_medveď_maco.wav');

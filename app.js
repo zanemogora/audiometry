@@ -12,6 +12,7 @@ const kvet_kvietok_div = document.getElementById("kvet_kvietok");
 
 const play_btn = document.getElementById("playbtn");
 
+
 var score = 0;
 var score2 = 0;
 

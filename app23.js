@@ -109,7 +109,7 @@ function main(){
 //funguje mi to tak ze vygenerujem premennu computerChoice o nejakej hodnote a drzim hodnotu aj pri zmene vstupu pouzivatela, este mi treba if (generovanahodnota) then zapni konkretny zvuk 
     
 
-    back_btn.addEventListener('click', function() {
+   /* back_btn.addEventListener('click', function() {
         console.log("STLACIL SI BACK");
         
         if (score43 > score_prve_user) {
@@ -123,7 +123,7 @@ function main(){
         }
 
         
-    })
+    })*/
 
     playbtn.addEventListener('click', function() {
        if (computerChoice == 'auto_auticko_sound') {
