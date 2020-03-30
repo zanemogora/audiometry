@@ -171,18 +171,24 @@ function main(){
 
     cervene_auto_div.addEventListener('click', function() {
         game("cervene_auto", computerChoice);
+        document.getElementById("cervene_auto").disabled = true;
     })
 
     cervena_div.addEventListener('click', function() {
         game("cervena", computerChoice);
+        document.getElementById("cervena").disabled = true;
     })
 
     jablko_jablcko_div.addEventListener('click', function() {
         game("jablko_jablcko", computerChoice);
+        document.getElementById("jablko_jablcko").disabled = true;
+
     })
 
     kvet_kvietok_div.addEventListener('click', function() {
         game("kvet_kvietok", computerChoice);
+        document.getElementById("kvet_kvietok").disabled = true;
+
     }) 
 }
 
