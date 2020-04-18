@@ -24,14 +24,6 @@ function main(){
     playbtn.addEventListener('click', function() {
             var audio = new Audio('audio/1000Hz.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
             
     })
