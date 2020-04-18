@@ -17,7 +17,14 @@ var score23 = localStorage.getItem("computerscore11");
 userScore_span.innerHTML = score22;
 computerScore_span.innerHTML = score23;
 
-
+function confirmation() {
+    var user_choice = window.confirm('Naozaj si prajete ukončiť hru a presunúť sa do úvodu aplikácie ?');
+    if(user_choice==true) {
+        window.location='index.html';  // you can also use element.submit() if your input type='submit' 
+    } else {
+        return false;
+    }
+}
 
 //Nahodny vyber z nahravok
 function getComputerChoice(){
@@ -35,7 +42,6 @@ function win(userChoice, computerChoice){
     localStorage.setItem("userscore12", score22);
     localStorage.setItem("computerscore12", score23);
 
-    window.location.replace('vyhra12.html');
 
     
 }
@@ -49,7 +55,6 @@ function lose(userChoice, computerChoice){
     localStorage.setItem("userscore12", score22);
     localStorage.setItem("computerscore12", score23);
     
-    window.location.replace('prehra12.html');
 
    
 }
@@ -105,42 +110,18 @@ function main(){
        if (computerChoice == 'sova_sovicka_sound') {
             var audio = new Audio('audio/18_sova_sovička.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'pes_psik_havo_sound') {
             var audio = new Audio('audio/11a_pes_psík_havo.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'noha_sound') {
             var audio = new Audio('audio/43_noha.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 

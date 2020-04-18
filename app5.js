@@ -24,6 +24,15 @@ console.log("User:Computer stvrte kolo =>" + score9,score10);
 userScore_span.innerHTML = score9;
 computerScore_span.innerHTML = score10;
 
+function confirmation() {
+    var user_choice = window.confirm('Naozaj si prajete ukončiť hru a presunúť sa do úvodu aplikácie ?');
+    if(user_choice==true) {
+        window.location='index.html';  // you can also use element.submit() if your input type='submit' 
+    } else {
+        return false;
+    }
+}
+
 //Nahodny vyber z nahravok
 function getComputerChoice(){
     const choices =["babika_place_sound","babika_sound","babika_spi_sound"];
@@ -40,7 +49,6 @@ function win(userChoice, computerChoice){
     localStorage.setItem("userscore5", score9);
     localStorage.setItem("computerscore5", score10);
 
-    window.location.replace('vyhra5.html');
 
    
 }
@@ -54,7 +62,6 @@ function lose(userChoice, computerChoice){
     localStorage.setItem("userscore5", score9);
     localStorage.setItem("computerscore5", score10);
     
-    window.location.replace('prehra5.html');
 
     
 }
@@ -127,42 +134,18 @@ function main(){
        if (computerChoice == 'babika_place_sound') {
             var audio = new Audio('audio/25_bábika plače.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'babika_sound') {
             var audio = new Audio('audio/34_bábika.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'babika_spi_sound') {
             var audio = new Audio('audio/24_bábika spí.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 

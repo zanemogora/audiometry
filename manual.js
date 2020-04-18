@@ -1,5 +1,13 @@
-
 const play_btn = document.getElementById("playbtn");
+
+function confirmation() {
+    var user_choice = window.confirm('Naozaj si prajete ukončiť hru a presunúť sa do úvodu aplikácie ?');
+    if(user_choice==true) {
+        window.location='index.html';  // you can also use element.submit() if your input type='submit' 
+    } else {
+        return false;
+    }
+}
 
 function playFunc(target, RepeatCount) {
     playbtn.disabled=true;
@@ -24,14 +32,6 @@ function main(){
     playbtn.addEventListener('click', function() {
             var audio = new Audio('audio/1000Hz.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
             
     })

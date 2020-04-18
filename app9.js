@@ -24,6 +24,16 @@ console.log("User:Computer tretie kolo =>" + score16,score17);
 userScore_span.innerHTML = score16;
 computerScore_span.innerHTML = score17;
 
+
+function confirmation() {
+    var user_choice = window.confirm('Naozaj si prajete ukončiť hru a presunúť sa do úvodu aplikácie ?');
+    if(user_choice==true) {
+        window.location='index.html';  // you can also use element.submit() if your input type='submit' 
+    } else {
+        return false;
+    }
+}
+
 //Nahodny vyber z nahravok
 function getComputerChoice(){
     const choices =["auto_auticko_sound","zajac_zajacik_sound","dom_domcek_sound"];
@@ -40,7 +50,6 @@ function win(userChoice, computerChoice){
     localStorage.setItem("userscore9", score16);
     localStorage.setItem("computerscore9", score17);
 
-    window.location.replace('vyhra9.html');
 
     
 }
@@ -54,7 +63,6 @@ function lose(userChoice, computerChoice){
     localStorage.setItem("userscore9", score16);
     localStorage.setItem("computerscore9", score17);
     
-    window.location.replace('prehra9.html');
 
    
 }
@@ -110,42 +118,18 @@ function main(){
        if (computerChoice == 'auto_auticko_sound') {
             var audio = new Audio('audio/2a_auto_autíčko.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'zajac_zajacik_sound') {
             var audio = new Audio('audio/15_zajac_zajačik.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'dom_domcek_sound') {
             var audio = new Audio('audio/33_dom_domček.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 

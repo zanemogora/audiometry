@@ -25,6 +25,16 @@ console.log("User:Computer stvrte kolo =>" + score47,score48);
 userScore_span.innerHTML = score47;
 computerScore_span.innerHTML = score48;
 
+function confirmation() {
+    var user_choice = window.confirm('Naozaj si prajete ukončiť hru a presunúť sa do úvodu aplikácie ?');
+    if(user_choice==true) {
+        window.location='index.html';  // you can also use element.submit() if your input type='submit' 
+    } else {
+        return false;
+    }
+}
+
+
 //Nahodny vyber z nahravok
 function getComputerChoice(){
     const choices =["pes_psik_havo_sound","ruka_sound","kon_konik_sound", "noha_sound"];
@@ -41,7 +51,6 @@ function win(userChoice, computerChoice){
     localStorage.setItem("userscore25", score47);
     localStorage.setItem("computerscore25", score48);
 
-    window.location.replace('vyhra25.html');
 
 }
 
@@ -54,7 +63,6 @@ function lose(userChoice, computerChoice){
     localStorage.setItem("userscore25", score47);
     localStorage.setItem("computerscore25", score48);
   
-    window.location.replace('prehra25.html');
 
 }
 
@@ -125,56 +133,24 @@ function main(){
        if (computerChoice == 'pes_psik_havo_sound') {
             var audio = new Audio('audio/11a_pes_psík_havo.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'ruka_sound') {
             var audio = new Audio('audio/42b_ruka.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'kon_konik_sound') {
             var audio = new Audio('audio/17_kôň_koník.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'noha_sound') {
             var audio = new Audio('audio/43_noha.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
     })

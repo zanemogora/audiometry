@@ -17,6 +17,15 @@ var score = 0;
 var score2 = 0;
 
 
+function confirmation() {
+    var user_choice = window.confirm('Naozaj si prajete ukončiť hru a presunúť sa do úvodu aplikácie ?');
+    if(user_choice==true) {
+        window.location='index.html';  // you can also use element.submit() if your input type='submit' 
+    } else {
+        return false;
+    }
+}
+
 //Nahodny vyber z nahravok
 function getComputerChoice(){
     const choices =["cervene_auto_sound","cervena_sound","jablko_jablcko_sound", "kvet_kvietok_sound"];
@@ -33,7 +42,7 @@ function win(userChoice, computerChoice){
     localStorage.setItem("userscore", score);
     localStorage.setItem("computerscore", score2);
 
-    window.location.replace('vyhra.html');
+    //window.location.replace('vyhra.html');
 
 
 
@@ -48,7 +57,7 @@ function lose(userChoice, computerChoice){
     localStorage.setItem("userscore", score);
     localStorage.setItem("computerscore", score2);
   
-    window.location.replace('prehra.html');
+    //window.location.replace('prehra.html');
 
 }
 
@@ -78,20 +87,19 @@ function game(userChoice, computerChoice){
 
 
 function playFunc(target, RepeatCount) {
-        playbtn.disabled=true;
-         var soundFunc = function(){
-            RepeatCount--;
-            target.currentTime = 0;
-            if (RepeatCount>0)
-                target.play();
-            else{
-               target.removeEventListener('ended', soundFunc);
-                playbtn.disabled=false;
+    playbtn.disabled=true;
+    var soundFunc = function(){
+        RepeatCount--;
+        target.currentTime = 0;
+        if (RepeatCount>0)
+            target.play();
+        else{
+            target.removeEventListener('ended', soundFunc);
+            playbtn.disabled=false;
             }
-        
-        }
-        target.addEventListener('ended', soundFunc)
-        target.play();
+    }
+    target.addEventListener('ended', soundFunc)
+    target.play();
 } 
 
 
@@ -106,66 +114,25 @@ function main(){
        if (computerChoice == 'cervene_auto_sound') {
             var audio = new Audio('audio/28_červené auto.wav');
             audio.play();
-            
-           if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
-
-
        }
 
        if (computerChoice == 'cervena_sound') {
             var audio = new Audio('audio/6_červená.wav');
             audio.play();
-
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
-
        }
 
        if (computerChoice == 'jablko_jablcko_sound') {
             var audio = new Audio('audio/46_jablko_jabĺčko.wav');
             audio.play();
-
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
-
        }
 
        if (computerChoice == 'kvet_kvietok_sound') {
             var audio = new Audio('audio/37_kvietok.wav');
             audio.play();
-
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
-
        }
     })
 

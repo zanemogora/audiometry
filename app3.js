@@ -22,7 +22,14 @@ console.log("User:Computer druhe kolo =>" + score5,score6);
 userScore_span.innerHTML = score5;
 computerScore_span.innerHTML = score6;
 
-
+function confirmation() {
+    var user_choice = window.confirm('Naozaj si prajete ukončiť hru a presunúť sa do úvodu aplikácie ?');
+    if(user_choice==true) {
+        window.location='index.html';  // you can also use element.submit() if your input type='submit' 
+    } else {
+        return false;
+    }
+}
 //Nahodny vyber z nahravok
 function getComputerChoice(){
     const choices =["vlak_vlacik_sound","vtak_vtacik_sound"];
@@ -39,7 +46,7 @@ function win(userChoice, computerChoice){
     localStorage.setItem("userscore3", score5);
     localStorage.setItem("computerscore3", score6);
 
-    window.location.replace('vyhra3.html');
+    //window.location.replace('vyhra3.html');
 
 
 }
@@ -53,7 +60,7 @@ function lose(userChoice, computerChoice){
     localStorage.setItem("userscore3", score5);
     localStorage.setItem("computerscore3", score6);
     
-    window.location.replace('prehra3.html');
+    //window.location.replace('prehra3.html');
 
     
 }
@@ -124,28 +131,12 @@ function main(){
        if (computerChoice == 'vlak_vlacik_sound') {
             var audio = new Audio('audio/4_vlak_vláčik.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'vtak_vtacik_sound') {
             var audio = new Audio('audio/14_vták_vtáčik.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
     })

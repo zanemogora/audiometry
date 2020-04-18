@@ -25,6 +25,16 @@ console.log("User:Computer tretie kolo =>" + score45,score46);
 userScore_span.innerHTML = score45;
 computerScore_span.innerHTML = score46;
 
+function confirmation() {
+    var user_choice = window.confirm('Naozaj si prajete ukončiť hru a presunúť sa do úvodu aplikácie ?');
+    if(user_choice==true) {
+        window.location='index.html';  // you can also use element.submit() if your input type='submit' 
+    } else {
+        return false;
+    }
+}
+
+
 //Nahodny vyber z nahravok
 function getComputerChoice(){
     const choices =["medved_maco_sound","strom_stromcek_sound","ucho_sound", "nos_sound"];
@@ -41,7 +51,6 @@ function win(userChoice, computerChoice){
     localStorage.setItem("userscore24", score45);
     localStorage.setItem("computerscore24", score46);
 
-    window.location.replace('vyhra24.html');
 
 }
 
@@ -54,7 +63,6 @@ function lose(userChoice, computerChoice){
     localStorage.setItem("userscore24", score45);
     localStorage.setItem("computerscore24", score46);
   
-    window.location.replace('prehra24.html');
 
 }
 
@@ -125,56 +133,24 @@ function main(){
        if (computerChoice == 'medved_maco_sound') {
             var audio = new Audio('audio/13_medveď_maco.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'strom_stromcek_sound') {
             var audio = new Audio('audio/38_strom_stromček.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'ucho_sound') {
             var audio = new Audio('audio/44_ucho.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'nos_sound') {
             var audio = new Audio('audio/45_nos.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
     })

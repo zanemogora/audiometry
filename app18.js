@@ -25,6 +25,16 @@ console.log("User:Computer druhe kolo =>" + score34,score35);
 userScore_span.innerHTML = score34;
 computerScore_span.innerHTML = score35;
 
+function confirmation() {
+    var user_choice = window.confirm('Naozaj si prajete ukončiť hru a presunúť sa do úvodu aplikácie ?');
+    if(user_choice==true) {
+        window.location='index.html';  // you can also use element.submit() if your input type='submit' 
+    } else {
+        return false;
+    }
+}
+
+
 
 //Nahodny vyber z nahravok
 function getComputerChoice(){
@@ -42,7 +52,6 @@ function win(userChoice, computerChoice){
     localStorage.setItem("userscore18", score34);
     localStorage.setItem("computerscore18", score35);
 
-    window.location.replace('vyhra18.html');
 
 }
 
@@ -55,7 +64,6 @@ function lose(userChoice, computerChoice){
     localStorage.setItem("userscore18", score34);
     localStorage.setItem("computerscore18", score35);
   
-    window.location.replace('prehra18.html');
 
 }
 
@@ -127,42 +135,18 @@ function main(){
        if (computerChoice == 'pes_psik_havo_sound') {
             var audio = new Audio('audio/11a_pes_psík_havo.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'zaba_zabka_sound') {
             var audio = new Audio('audio/16_žaba_žabka.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'dzus_dzusik_sound') {
             var audio = new Audio('audio/49a_džús_džúsik.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 

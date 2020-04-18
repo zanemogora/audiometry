@@ -25,6 +25,14 @@ console.log("User:Computer stvrte kolo =>" + score18,score19);
 userScore_span.innerHTML = score18;
 computerScore_span.innerHTML = score19;
 
+function confirmation() {
+    var user_choice = window.confirm('Naozaj si prajete ukončiť hru a presunúť sa do úvodu aplikácie ?');
+    if(user_choice==true) {
+        window.location='index.html';  // you can also use element.submit() if your input type='submit' 
+    } else {
+        return false;
+    }
+}
 
 //Nahodny vyber z nahravok
 function getComputerChoice(){
@@ -42,7 +50,6 @@ function win(userChoice, computerChoice){
     localStorage.setItem("userscore10", score18);
     localStorage.setItem("computerscore10", score19);
 
-    window.location.replace('vyhra10.html');
 
 }
 
@@ -55,7 +62,6 @@ function lose(userChoice, computerChoice){
     localStorage.setItem("userscore10", score18);
     localStorage.setItem("computerscore10", score19);
     
-    window.location.replace('prehra10.html');
 
    
 }
@@ -112,42 +118,18 @@ function main(){
        if (computerChoice == 'strom_stromcek_sound') {
             var audio = new Audio('audio/38_strom_stromček.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'postel_postielka_sound') {
             var audio = new Audio('audio/39_posteľ_postieľka.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'chlieb_chlebik_sound') {
             var audio = new Audio('audio/48_chlieb_chlebík.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 

@@ -24,6 +24,14 @@ console.log("User:Computer druhe kolo =>" + score14,score15);
 userScore_span.innerHTML = score14;
 computerScore_span.innerHTML = score15;
 
+function confirmation() {
+    var user_choice = window.confirm('Naozaj si prajete ukončiť hru a presunúť sa do úvodu aplikácie ?');
+    if(user_choice==true) {
+        window.location='index.html';  // you can also use element.submit() if your input type='submit' 
+    } else {
+        return false;
+    }
+}
 
 //Nahodny vyber z nahravok
 function getComputerChoice(){
@@ -41,7 +49,6 @@ function win(userChoice, computerChoice){
     localStorage.setItem("userscore8", score14);
     localStorage.setItem("computerscore8", score15);
 
-    window.location.replace('vyhra8.html');
 
     
 }
@@ -55,7 +62,6 @@ function lose(userChoice, computerChoice){
     localStorage.setItem("userscore8", score14);
     localStorage.setItem("computerscore8", score15);
     
-    window.location.replace('prehra8.html');
 
    
 }
@@ -111,42 +117,18 @@ function main(){
        if (computerChoice == 'auto_auticko_sound') {
             var audio = new Audio('audio/2a_auto_autíčko.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'vlak_vlacik_sound') {
             var audio = new Audio('audio/4_vlak_vláčik.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'banan_bananik_sound') {
             var audio = new Audio('audio/47_banán_banánik.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 

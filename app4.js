@@ -24,6 +24,14 @@ console.log("User:Computer tretie kolo =>" + score7,score8);
 userScore_span.innerHTML = score7;
 computerScore_span.innerHTML = score8;
 
+function confirmation() {
+    var user_choice = window.confirm('Naozaj si prajete ukončiť hru a presunúť sa do úvodu aplikácie ?');
+    if(user_choice==true) {
+        window.location='index.html';  // you can also use element.submit() if your input type='submit' 
+    } else {
+        return false;
+    }
+}
 
 //Nahodny vyber z nahravok
 function getComputerChoice(){
@@ -41,7 +49,6 @@ function win(userChoice, computerChoice){
     localStorage.setItem("userscore4", score7);
     localStorage.setItem("computerscore4", score8);
 
-    window.location.replace('vyhra4.html');
 
     
 }
@@ -55,7 +62,6 @@ function lose(userChoice, computerChoice){
     localStorage.setItem("userscore4", score7);
     localStorage.setItem("computerscore4", score8);
     
-    window.location.replace('prehra4.html');
 
     
 }
@@ -108,78 +114,28 @@ function main(){
 
 //funguje mi to tak ze vygenerujem premennu computerChoice o nejakej hodnote a drzim hodnotu aj pri zmene vstupu pouzivatela, este mi treba if (generovanahodnota) then zapni konkretny zvuk 
     
-
-    back_btn.addEventListener('click', function() {
-        console.log("STLACIL SI BACK");
-        
-        if (score7 > score_druhe_user) {
-            score7--;
-            localStorage.setItem("userscore4", score7);
-        }
-
-        if (score8 > score_druhe_computer) {
-            score8--;
-            localStorage.setItem("computerscore4", score8);
-        }
-
-        
-    })
-
-
     play_btn.addEventListener('click', function() {
        if (computerChoice == 'modre_auto_sound') {
             var audio = new Audio('audio/26_modré auto.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'bicykel_sound') {
             var audio = new Audio('audio/1_bicykel.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'lietadlo_lietadielko_sound') {
             var audio = new Audio('audio/3_lietadlo_lietadielko.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'autobus_sound') {
             var audio = new Audio('audio/5_autobus.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
     })

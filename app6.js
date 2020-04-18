@@ -15,6 +15,15 @@ const play_btn = document.getElementById("playbtn");
 var score10 = 0;
 var score11 = 0;
 
+function confirmation() {
+    var user_choice = window.confirm('Naozaj si prajete ukončiť hru a presunúť sa do úvodu aplikácie ?');
+    if(user_choice==true) {
+        window.location='index.html';  // you can also use element.submit() if your input type='submit' 
+    } else {
+        return false;
+    }
+}
+
 //Nahodny vyber z nahravok
 function getComputerChoice(){
     const choices =["macka_macicka_sound","ruka_sound","kvet_kvietok_sound", "dzus_dzusik_sound"];
@@ -31,7 +40,6 @@ function win(userChoice, computerChoice){
     localStorage.setItem("userscore6", score10);
     localStorage.setItem("computerscore6", score11);
 
-    window.location.replace('vyhra6.html');
 
     
 }
@@ -45,7 +53,6 @@ function lose(userChoice, computerChoice){
     localStorage.setItem("userscore6", score10);
     localStorage.setItem("computerscore6", score11);
 
-    window.location.replace('prehra6.html');
 
 }
 
@@ -101,56 +108,24 @@ function main(){
        if (computerChoice == 'macka_macicka_sound') {
             var audio = new Audio('audio/10_mačka_mačička.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'ruka_sound') {
             var audio = new Audio('audio/42a_ruka.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'kvet_kvietok_sound') {
             var audio = new Audio('audio/37_kvietok.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'dzus_dzusik_sound') {
             var audio = new Audio('audio/49b_džús_džúsik.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
     })

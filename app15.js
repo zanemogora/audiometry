@@ -25,6 +25,16 @@ console.log("User:Computer stvrte kolo =>" + score28,score29);
 userScore_span.innerHTML = score28;
 computerScore_span.innerHTML = score29;
 
+function confirmation() {
+    var user_choice = window.confirm('Naozaj si prajete ukončiť hru a presunúť sa do úvodu aplikácie ?');
+    if(user_choice==true) {
+        window.location='index.html';  // you can also use element.submit() if your input type='submit' 
+    } else {
+        return false;
+    }
+}
+
+
 //Nahodny vyber z nahravok
 function getComputerChoice(){
     const choices =["strom_stromcek_sound","mys_myska_sound","postel_postielka_sound", "banan_bananik_sound"];
@@ -41,7 +51,6 @@ function win(userChoice, computerChoice){
     localStorage.setItem("userscore15", score28);
     localStorage.setItem("computerscore15", score29);
 
-    window.location.replace('vyhra15.html');
 
 }
 
@@ -54,7 +63,6 @@ function lose(userChoice, computerChoice){
     localStorage.setItem("userscore15", score28);
     localStorage.setItem("computerscore15", score29);
   
-    window.location.replace('prehra15.html');
 
 }
 
@@ -125,56 +133,24 @@ function main(){
        if (computerChoice == 'strom_stromcek_sound') {
             var audio = new Audio('audio/38_strom_stromček.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'mys_myska_sound') {
             var audio = new Audio('audio/19_myš_myška.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'postel_postielka_sound') {
             var audio = new Audio('audio/39_posteľ_postieľka.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'banan_bananik_sound') {
             var audio = new Audio('audio/47_banán_banánik.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
     })

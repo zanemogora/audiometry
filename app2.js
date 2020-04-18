@@ -7,7 +7,7 @@ const pes_psik_havo_div = document.getElementById("pes_psik_havo");
 const macka_a_pes_div = document.getElementById("macka_a_pes");
 const macka_a_konik_div = document.getElementById("macka_a_konik");
 const macka_macicka_div = document.getElementById("macka_macicka");
-//const playbutton_div = document.getElementById("playbutton3");
+
 const play_btn = document.getElementById("playbtn");
 
 //kvoli dalsiemu inkrementovaniu score
@@ -15,6 +15,15 @@ var score3 = localStorage.getItem("userscore");
 var score4 = localStorage.getItem("computerscore");
 userScore_span.innerHTML = score3;
 computerScore_span.innerHTML = score4;
+
+function confirmation() {
+    var user_choice = window.confirm('Naozaj si prajete ukončiť hru a presunúť sa do úvodu aplikácie ?');
+    if(user_choice==true) {
+        window.location='index.html';  // you can also use element.submit() if your input type='submit' 
+    } else {
+        return false;
+    }
+}
 
 
 //Nahodny vyber z nahravok
@@ -33,7 +42,7 @@ function win(userChoice, computerChoice){
     localStorage.setItem("userscore2", score3);
     localStorage.setItem("computerscore2", score4);
 
-    window.location.replace('vyhra2.html');
+    //window.location.replace('vyhra2.html');
 
       
 }
@@ -48,7 +57,7 @@ function lose(userChoice, computerChoice){
     localStorage.setItem("userscore2", score3);
     localStorage.setItem("computerscore2", score4);
 
-    window.location.replace('prehra2.html');
+    //window.location.replace('prehra2.html');
 
 }
 
@@ -78,7 +87,7 @@ function game(userChoice, computerChoice){
 
 function playFunc(target, RepeatCount) {
     playbtn.disabled=true;
-     var soundFunc = function(){
+    var soundFunc = function(){
         RepeatCount--;
         target.currentTime = 0;
         if (RepeatCount>0)
@@ -87,7 +96,6 @@ function playFunc(target, RepeatCount) {
            target.removeEventListener('ended', soundFunc);
             playbtn.disabled=false;
         }
-    
     }
     target.addEventListener('ended', soundFunc)
     target.play();
@@ -102,63 +110,28 @@ function main(){
     
 //funguje mi to tak ze vygenerujem premennu computerChoice o nejakej hodnote a drzim hodnotu aj pri zmene vstupu pouzivatela, este mi treba if (generovanahodnota) then zapni konkretny zvuk 
    
-
-
-
 play_btn.addEventListener('click', function() {
        if (computerChoice == 'pes_psik_havo_sound') {
             var audio = new Audio('audio/11a_pes_psík_havo.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'macka_a_pes_sound') {
             var audio = new Audio('audio/30_mačka a pes.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'macka_a_konik_sound') {
             var audio = new Audio('audio/32_mačka a koník.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'macka_macicka_sound') {
             var audio = new Audio('audio/10_mačka_mačička.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 })

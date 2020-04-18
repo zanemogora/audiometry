@@ -25,6 +25,15 @@ console.log("User:Computer druhe kolo =>" + score24,score25);
 userScore_span.innerHTML = score24;
 computerScore_span.innerHTML = score25;
 
+function confirmation() {
+    var user_choice = window.confirm('Naozaj si prajete ukončiť hru a presunúť sa do úvodu aplikácie ?');
+    if(user_choice==true) {
+        window.location='index.html';  // you can also use element.submit() if your input type='submit' 
+    } else {
+        return false;
+    }
+}
+
 
 //Nahodny vyber z nahravok
 function getComputerChoice(){
@@ -42,7 +51,6 @@ function win(userChoice, computerChoice){
     localStorage.setItem("userscore13", score24);
     localStorage.setItem("computerscore13", score25);
 
-    window.location.replace('vyhra13.html');
 
 }
 
@@ -55,7 +63,6 @@ function lose(userChoice, computerChoice){
     localStorage.setItem("userscore13", score24);
     localStorage.setItem("computerscore13", score25);
   
-    window.location.replace('prehra13.html');
 
 }
 
@@ -127,56 +134,24 @@ function main(){
        if (computerChoice == 'ucho_sound') {
             var audio = new Audio('audio/44_ucho.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'vtak_vtacik_sound') {
             var audio = new Audio('audio/14_vták_vtáčik.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'zajac_zajacik_sound') {
             var audio = new Audio('audio/15_zajac_zajačik.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'ruka_sound') {
             var audio = new Audio('audio/42a_ruka.wav');
             audio.play();
-            if (!audio.paused || audio.currentTime) {
-                console.log("block");
-                document.getElementById("playbtn").disabled = true;
-            } else if (audio.paused) {
-                console.log("unblock");
-
-                document.getElementById("playbtn").disabled = false;
-            }
             playFunc(audio, 1);
        }
     })
