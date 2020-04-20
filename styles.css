@@ -60,7 +60,7 @@ textarea {
 /* style inputs and link buttons */
 input,
 .btn {
-  width: 50%;
+  width: 100%;
   padding: 40px;
   display: block;
   margin: 20px auto;
