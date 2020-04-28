@@ -116,19 +116,19 @@ function main(){
 
     play_btn.addEventListener('click', function() {
        if (computerChoice == 'strom_stromcek_sound') {
-            var audio = new Audio('audio_prave_ucho/38_strom_stromček.wav');
+            var audio = new Audio('audio_prave_ucho/38_strom_stromcek.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'postel_postielka_sound') {
-            var audio = new Audio('audio_prave_ucho/39_posteľ_postieľka.wav');
+            var audio = new Audio('audio_prave_ucho/39_postel_postielka.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'chlieb_chlebik_sound') {
-            var audio = new Audio('audio_prave_ucho/48_chlieb_chlebík.wav');
+            var audio = new Audio('audio_prave_ucho/48_chlieb_chlebik.wav');
             audio.play();
             playFunc(audio, 1);
        }

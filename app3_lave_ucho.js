@@ -129,13 +129,13 @@ function main(){
 
     play_btn.addEventListener('click', function() {
        if (computerChoice == 'vlak_vlacik_sound') {
-            var audio = new Audio('audio_lave_ucho/4_vlak_vláčik.wav');
+            var audio = new Audio('audio_lave_ucho/4_vlak_vlacik.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'vtak_vtacik_sound') {
-            var audio = new Audio('audio_lave_ucho/14_vták_vtáčik.wav');
+            var audio = new Audio('audio_lave_ucho/14_vtak_vtacik.wav');
             audio.play();
             playFunc(audio, 1);
        }

@@ -131,25 +131,25 @@ function main(){
 
     playbtn.addEventListener('click', function() {
        if (computerChoice == 'strom_stromcek_sound') {
-            var audio = new Audio('audio/38_strom_stromček.wav');
+            var audio = new Audio('audio/38_strom_stromcek.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'mys_myska_sound') {
-            var audio = new Audio('audio/19_myš_myška.wav');
+            var audio = new Audio('audio/19_mys_myska.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'postel_postielka_sound') {
-            var audio = new Audio('audio/39_posteľ_postieľka.wav');
+            var audio = new Audio('audio/39_postel_postielka.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'banan_bananik_sound') {
-            var audio = new Audio('audio/47_banán_banánik.wav');
+            var audio = new Audio('audio/47_banan_bananik.wav');
             audio.play();
             playFunc(audio, 1);
        }

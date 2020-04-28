@@ -112,25 +112,25 @@ function main(){
    
 play_btn.addEventListener('click', function() {
        if (computerChoice == 'pes_psik_havo_sound') {
-            var audio = new Audio('audio_prave_ucho/11a_pes_psík_havo.wav');
+            var audio = new Audio('audio_prave_ucho/11a_pes_psik_havo.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'macka_a_pes_sound') {
-            var audio = new Audio('audio_prave_ucho/30_mačka a pes.wav');
+            var audio = new Audio('audio_prave_ucho/30_macka a pes.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'macka_a_konik_sound') {
-            var audio = new Audio('audio_prave_ucho/32_mačka a koník.wav');
+            var audio = new Audio('audio_prave_ucho/32_macka a konik.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'macka_macicka_sound') {
-            var audio = new Audio('audio_prave_ucho/10_mačka_mačička.wav');
+            var audio = new Audio('audio_prave_ucho/10_macka_macicka.wav');
             audio.play();
             playFunc(audio, 1);
        }

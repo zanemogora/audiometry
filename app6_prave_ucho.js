@@ -106,7 +106,7 @@ function main(){
     
     play_btn.addEventListener('click', function() {
        if (computerChoice == 'macka_macicka_sound') {
-            var audio = new Audio('audio_prave_ucho/10_mačka_mačička.wav');
+            var audio = new Audio('audio_prave_ucho/10_macka_macicka.wav');
             audio.play();
             playFunc(audio, 1);
        }
@@ -124,7 +124,7 @@ function main(){
        }
 
        if (computerChoice == 'dzus_dzusik_sound') {
-            var audio = new Audio('audio_prave_ucho/49b_džús_džúsik.wav');
+            var audio = new Audio('audio_prave_ucho/49b_dzus_dzusik.wav');
             audio.play();
             playFunc(audio, 1);
        }

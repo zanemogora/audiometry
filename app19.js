@@ -131,13 +131,13 @@ function main(){
 
     playbtn.addEventListener('click', function() {
        if (computerChoice == 'sova_sovicka_sound') {
-            var audio = new Audio('audio/18_sova_sovička.wav');
+            var audio = new Audio('audio/18_sova_sovicka.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'vlak_vlacik_sound') {
-            var audio = new Audio('audio/4_vlak_vláčik.wav');
+            var audio = new Audio('audio/4_vlak_vlacik.wav');
             audio.play();
             playFunc(audio, 1);
        }

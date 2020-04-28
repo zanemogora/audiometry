@@ -134,7 +134,7 @@ function main(){
 
     playbtn.addEventListener('click', function() {
        if (computerChoice == 'auto_auticko_sound') {
-            var audio = new Audio('audio_lave_ucho/2a_auto_autíčko.wav');
+            var audio = new Audio('audio_lave_ucho/2a_auto_auticko.wav');
             audio.play();
             playFunc(audio, 1);
        }

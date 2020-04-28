@@ -116,7 +116,7 @@ function main(){
     
     play_btn.addEventListener('click', function() {
        if (computerChoice == 'modre_auto_sound') {
-            var audio = new Audio('audio_lave_ucho/26_modré auto.wav');
+            var audio = new Audio('audio_lave_ucho/26_modre auto.wav');
             audio.play();
             playFunc(audio, 1);
        }

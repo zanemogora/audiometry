@@ -117,13 +117,13 @@ function main(){
        }
 
        if (computerChoice == 'postel_postielka_sound') {
-            var audio = new Audio('audio_lave_ucho/39_posteľ_postieľka.wav');
+            var audio = new Audio('audio_lave_ucho/39_postel_postielka.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'dom_domcek_sound') {
-            var audio = new Audio('audio_lave_ucho/33_dom_domček.wav');
+            var audio = new Audio('audio_lave_ucho/33_dom_domcek.wav');
             audio.play();
             playFunc(audio, 1);
        }

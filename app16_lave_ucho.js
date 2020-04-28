@@ -107,13 +107,13 @@ function main(){
     
     play_btn.addEventListener('click', function() {
        if (computerChoice == 'sova_sovicka_sound') {
-            var audio = new Audio('audio_lave_ucho/18_sova_sovička.wav');
+            var audio = new Audio('audio_lave_ucho/18_sova_sovicka.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'krava_kravicka_sound') {
-            var audio = new Audio('audio_lave_ucho/12_krava_kravička.wav');
+            var audio = new Audio('audio_lave_ucho/12_krava_kravicka.wav');
             audio.play();
             playFunc(audio, 1);
        }

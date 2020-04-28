@@ -107,19 +107,19 @@ function main(){
     
     play_btn.addEventListener('click', function() {
        if (computerChoice == 'auto_auticko_sound') {
-            var audio = new Audio('audio_lave_ucho/2a_auto_autíčko.wav');
+            var audio = new Audio('audio_lave_ucho/2a_auto_auticko.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'medved_maco_sound') {
-            var audio = new Audio('audio_lave_ucho/13_medveď_maco.wav');
+            var audio = new Audio('audio_lave_ucho/13_medved_maco.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'oci_sound') {
-            var audio = new Audio('audio_lave_ucho/41_oči.wav');
+            var audio = new Audio('audio_lave_ucho/41_oci.wav');
             audio.play();
             playFunc(audio, 1);
        }

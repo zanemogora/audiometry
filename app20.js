@@ -132,7 +132,7 @@ function main(){
 
     playbtn.addEventListener('click', function() {
        if (computerChoice == 'auto_auticko_sound') {
-            var audio = new Audio('audio/2c_auto_autíčko.wav');
+            var audio = new Audio('audio/2c_auto_auticko.wav');
             audio.play();
             playFunc(audio, 1);
        }
@@ -144,13 +144,13 @@ function main(){
        }
 
        if (computerChoice == 'chlieb_chlebik_sound') {
-            var audio = new Audio('audio/48_chlieb_chlebík.wav');
+            var audio = new Audio('audio/48_chlieb_chlebik.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'kon_konik_sound') {
-            var audio = new Audio('audio/17_kôň_koník.wav');
+            var audio = new Audio('audio/17_kon_konik.wav');
             audio.play();
             playFunc(audio, 1);
        }

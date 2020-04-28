@@ -108,13 +108,13 @@ function main(){
     
     play_btn.addEventListener('click', function() {
        if (computerChoice == 'sova_sovicka_sound') {
-            var audio = new Audio('audio/18_sova_sovička.wav');
+            var audio = new Audio('audio/18_sova_sovicka.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'pes_psik_havo_sound') {
-            var audio = new Audio('audio/11a_pes_psík_havo.wav');
+            var audio = new Audio('audio/11a_pes_psik_havo.wav');
             audio.play();
             playFunc(audio, 1);
        }

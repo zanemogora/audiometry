@@ -109,25 +109,25 @@ function main(){
     
     play_btn.addEventListener('click', function() {
        if (computerChoice == 'strom_stromcek_sound') {
-            var audio = new Audio('audio_lave_ucho/38_strom_stromček.wav');
+            var audio = new Audio('audio_lave_ucho/38_strom_stromcek.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'vtak_vtacik_sound') {
-            var audio = new Audio('audio_lave_ucho/14_vták_vtáčik.wav');
+            var audio = new Audio('audio_lave_ucho/14_vtak_vtacik.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'zajac_zajacik_sound') {
-            var audio = new Audio('audio_lave_ucho/15_zajac_zajačik.wav');
+            var audio = new Audio('audio_lave_ucho/15_zajac_zajacik.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'oci_sound') {
-        var audio = new Audio('audio_lave_ucho/41_oči.wav');
+        var audio = new Audio('audio_lave_ucho/41_oci.wav');
         audio.play();
         playFunc(audio, 1);
    }

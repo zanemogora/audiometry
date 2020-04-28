@@ -112,19 +112,19 @@ function main(){
 
     playbtn.addEventListener('click', function() {
        if (computerChoice == 'cervene_auto_sound') {
-            var audio = new Audio('audio_lave_ucho/28_červené auto.wav');
+            var audio = new Audio('audio_lave_ucho/28_cervene auto.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'cervena_sound') {
-            var audio = new Audio('audio_lave_ucho/6_červená.wav');
+            var audio = new Audio('audio_lave_ucho/6_cervena.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'jablko_jablcko_sound') {
-            var audio = new Audio('audio_lave_ucho/46_jablko_jabĺčko.wav');
+            var audio = new Audio('audio_lave_ucho/46_jablko_jablcko.wav');
             audio.play();
             playFunc(audio, 1);
        }

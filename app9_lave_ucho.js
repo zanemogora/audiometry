@@ -116,19 +116,19 @@ function main(){
     
     play_btn.addEventListener('click', function() {
        if (computerChoice == 'auto_auticko_sound') {
-            var audio = new Audio('audio_lave_ucho/2a_auto_autíčko.wav');
+            var audio = new Audio('audio_lave_ucho/2a_auto_auticko.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'zajac_zajacik_sound') {
-            var audio = new Audio('audio_lave_ucho/15_zajac_zajačik.wav');
+            var audio = new Audio('audio_lave_ucho/15_zajac_zajacik.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'dom_domcek_sound') {
-            var audio = new Audio('audio_lave_ucho/33_dom_domček.wav');
+            var audio = new Audio('audio_lave_ucho/33_dom_domcek.wav');
             audio.play();
             playFunc(audio, 1);
        }

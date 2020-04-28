@@ -108,7 +108,7 @@ function main(){
     
     play_btn.addEventListener('click', function() {
        if (computerChoice == 'postel_postielka_sound') {
-            var audio = new Audio('audio_lave_ucho/39_posteľ_postieľka.wav');
+            var audio = new Audio('audio_lave_ucho/39_postel_postielka.wav');
             audio.play();
             playFunc(audio, 1);
        }

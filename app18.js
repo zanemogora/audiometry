@@ -133,19 +133,19 @@ function main(){
 
     playbtn.addEventListener('click', function() {
        if (computerChoice == 'pes_psik_havo_sound') {
-            var audio = new Audio('audio/11a_pes_psík_havo.wav');
+            var audio = new Audio('audio/11a_pes_psik_havo.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'zaba_zabka_sound') {
-            var audio = new Audio('audio/16_žaba_žabka.wav');
+            var audio = new Audio('audio/16_zaba_zabka.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'dzus_dzusik_sound') {
-            var audio = new Audio('audio/49a_džús_džúsik.wav');
+            var audio = new Audio('audio/49a_dzus_dzusik.wav');
             audio.play();
             playFunc(audio, 1);
        }

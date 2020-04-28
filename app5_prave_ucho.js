@@ -132,19 +132,19 @@ function main(){
 
     play_btn.addEventListener('click', function() {
        if (computerChoice == 'babika_place_sound') {
-            var audio = new Audio('audio_prave_ucho/25_bábika plače.wav');
+            var audio = new Audio('audio_prave_ucho/25_babika place.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'babika_sound') {
-            var audio = new Audio('audio_prave_ucho/34_bábika.wav');
+            var audio = new Audio('audio_prave_ucho/34_babika.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'babika_spi_sound') {
-            var audio = new Audio('audio_prave_ucho/24_bábika spí.wav');
+            var audio = new Audio('audio_prave_ucho/24_babika spi.wav');
             audio.play();
             playFunc(audio, 1);
        }

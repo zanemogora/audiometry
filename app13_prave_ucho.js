@@ -138,13 +138,13 @@ function main(){
        }
 
        if (computerChoice == 'vtak_vtacik_sound') {
-            var audio = new Audio('audio_prave_ucho/14_vták_vtáčik.wav');
+            var audio = new Audio('audio_prave_ucho/14_vtak_vtacik.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'zajac_zajacik_sound') {
-            var audio = new Audio('audio_prave_ucho/15_zajac_zajačik.wav');
+            var audio = new Audio('audio_prave_ucho/15_zajac_zajacik.wav');
             audio.play();
             playFunc(audio, 1);
        }

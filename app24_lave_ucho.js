@@ -131,13 +131,13 @@ function main(){
 
     playbtn.addEventListener('click', function() {
        if (computerChoice == 'medved_maco_sound') {
-            var audio = new Audio('audio_lave_ucho/13_medveď_maco.wav');
+            var audio = new Audio('audio_lave_ucho/13_medved_maco.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'strom_stromcek_sound') {
-            var audio = new Audio('audio_lave_ucho/38_strom_stromček.wav');
+            var audio = new Audio('audio_lave_ucho/38_strom_stromcek.wav');
             audio.play();
             playFunc(audio, 1);
        }

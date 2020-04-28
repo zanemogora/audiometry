@@ -131,7 +131,7 @@ function main(){
 
     playbtn.addEventListener('click', function() {
        if (computerChoice == 'pes_psik_havo_sound') {
-            var audio = new Audio('audio_prave_ucho/11a_pes_psík_havo.wav');
+            var audio = new Audio('audio_prave_ucho/11a_pes_psik_havo.wav');
             audio.play();
             playFunc(audio, 1);
        }
@@ -143,7 +143,7 @@ function main(){
        }
 
        if (computerChoice == 'kon_konik_sound') {
-            var audio = new Audio('audio_prave_ucho/17_kôň_koník.wav');
+            var audio = new Audio('audio_prave_ucho/17_kon_konik.wav');
             audio.play();
             playFunc(audio, 1);
        }

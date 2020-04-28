@@ -115,19 +115,19 @@ function main(){
     
     play_btn.addEventListener('click', function() {
        if (computerChoice == 'auto_auticko_sound') {
-            var audio = new Audio('audio_lave_ucho/2a_auto_autíčko.wav');
+            var audio = new Audio('audio_lave_ucho/2a_auto_auticko.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'vlak_vlacik_sound') {
-            var audio = new Audio('audio_lave_ucho/4_vlak_vláčik.wav');
+            var audio = new Audio('audio_lave_ucho/4_vlak_vlacik.wav');
             audio.play();
             playFunc(audio, 1);
        }
 
        if (computerChoice == 'banan_bananik_sound') {
-            var audio = new Audio('audio_lave_ucho/47_banán_banánik.wav');
+            var audio = new Audio('audio_lave_ucho/47_banan_bananik.wav');
             audio.play();
             playFunc(audio, 1);
        }

@@ -109,7 +109,7 @@ function main(){
     
     play_btn.addEventListener('click', function() {
        if (computerChoice == 'lopta_lopticka_sound') {
-            var audio = new Audio('audio_lave_ucho/36_lopta_loptička.wav');
+            var audio = new Audio('audio_lave_ucho/36_lopta_lopticka.wav');
             audio.play();
             playFunc(audio, 1);
        }
@@ -121,7 +121,7 @@ function main(){
        }
 
        if (computerChoice == 'kon_konik_sound') {
-            var audio = new Audio('audio_lave_ucho/17_kôň_koník.wav');
+            var audio = new Audio('audio_lave_ucho/17_kon_konik.wav');
             audio.play();
             playFunc(audio, 1);
        }
