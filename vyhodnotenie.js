@@ -101,7 +101,7 @@ function confirmation() {
 }
 
 
-function download(filename, text) {
+/*function download(filename, text) {
     var pom = document.createElement('a');
     pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + 
   
@@ -114,7 +114,7 @@ function download(filename, text) {
     pom.click();
   
     document.body.removeChild(pom);
-}
+}*/
 
 
 
