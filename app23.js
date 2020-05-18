@@ -10,9 +10,18 @@ const cervena_div = document.getElementById("nos");
 const jablko_jablcko_div = document.getElementById("kvet_kvietok");
 const noha_div = document.getElementById("noha");
 
-
 const play_btn = document.getElementById("playbtn");
 const back_btn = document.getElementById("inner1");
+
+
+var countClicks23 = 0;
+function clickcounter() {
+    countClicks23++;
+    console.log(countClicks23);
+    localStorage.setItem("clickcounter23", countClicks23);
+
+}
+
 
 //kvoli tlacidlu back, aby vedel rozoznat program body v kolach
 var score_prve_user = localStorage.getItem("userscore21");

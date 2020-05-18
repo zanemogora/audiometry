@@ -13,6 +13,14 @@ const kvet_kvietok_div = document.getElementById("vtak_vtacik");
 const play_btn = document.getElementById("playbtn");
 const back_btn = document.getElementById("inner1");
 
+var countClicks14 = 0;
+function clickcounter() {
+    countClicks14++;
+    console.log(countClicks14);
+    localStorage.setItem("clickcounter14", countClicks14);
+}
+
+
 //kvoli tlacidlu back, aby vedel rozoznat program body v kolach
 var score_druhe_user = localStorage.getItem("userscore12");
 var score_druhe_computer = localStorage.getItem("computerscore12");

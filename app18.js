@@ -13,6 +13,16 @@ const jablko_jablcko_div = document.getElementById("dzus_dzusik");
 const play_btn = document.getElementById("playbtn");
 const back_btn = document.getElementById("inner1");
 
+
+var countClicks18 = 0;
+function clickcounter() {
+    countClicks18++;
+    console.log(countClicks18);
+    localStorage.setItem("clickcounter18", countClicks18);
+
+}
+
+
 //kvoli tlacidlu back, aby vedel rozoznat program body v kolach
 var score_prve_user = localStorage.getItem("userscore16");
 var score_prve_computer = localStorage.getItem("computerscore16");

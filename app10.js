@@ -13,6 +13,17 @@ const babika_spi_div = document.getElementById("chlieb_chlebik");
 const play_btn = document.getElementById("playbtn");
 const back_btn = document.getElementById("inner1");
 
+
+var countClicks10 = 0;
+function clickcounter() {
+    countClicks10++;
+    console.log(countClicks10);
+    localStorage.setItem("clickcounter10", countClicks10);
+
+}
+
+
+
 //kvoli tlacidlu back, aby vedel rozoznat program body v kolach
 var score_tretie_user = localStorage.getItem("userscore8");
 var score_tretie_computer = localStorage.getItem("computerscore8");

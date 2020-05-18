@@ -13,6 +13,15 @@ const oci_div = document.getElementById("oci");
 //const playbutton_div = document.getElementById("playbutton3");
 const play_btn = document.getElementById("playbtn");
 
+
+var countClicks21 = 0;
+function clickcounter() {
+    countClicks21++;
+    console.log(countClicks21);
+    localStorage.setItem("clickcounter21", countClicks21);
+
+}
+
 var score40 = 0;
 var score41 = 0;
 

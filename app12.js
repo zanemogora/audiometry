@@ -11,6 +11,17 @@ const babika_spi_div = document.getElementById("noha");
 
 const play_btn = document.getElementById("playbtn");
 
+
+var countClicks12 = 0;
+function clickcounter() {
+    countClicks12++;
+    console.log(countClicks12);
+    localStorage.setItem("clickcounter12", countClicks12);
+
+}
+
+
+
 //kvoli dalsiemu inkrementovaniu score
 var score22 = localStorage.getItem("userscore11");
 var score23 = localStorage.getItem("computerscore11");

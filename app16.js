@@ -12,6 +12,17 @@ const babika_spi_div = document.getElementById("noha");
 //const playbutton_div = document.getElementById("playbutton3");
 const play_btn = document.getElementById("playbtn");
 
+
+var countClicks16 = 0;
+function clickcounter() {
+    countClicks16++;
+    console.log(countClicks16);
+    localStorage.setItem("clickcounter16", countClicks16);
+
+}
+
+
+
 var score30 = 0;
 var score31 = 0;
 

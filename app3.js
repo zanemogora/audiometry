@@ -1,4 +1,3 @@
-
 const userScore_span = document.getElementById("correct-score");
 const computerScore_span = document.getElementById("wrong-score");
 const score_Board = document.querySelector(".score-board");
@@ -9,6 +8,16 @@ const vtak_vtacik_div = document.getElementById("vtak_vtacik");
 //const playbutton_div = document.getElementById("playbutton3");
 const play_btn = document.getElementById("playbtn");
 const back_btn = document.getElementById("inner1");
+
+var countClicks3 = 0;
+function clickcounter() {
+    countClicks3++;
+    console.log(countClicks3);
+    localStorage.setItem("clickcounter3", countClicks3);
+
+}
+
+
 
 //kvoli tlacidlu back, aby vedel rozoznat program body v kolach
 var score_prve_user = localStorage.getItem("userscore");

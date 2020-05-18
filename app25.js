@@ -13,6 +13,16 @@ const kvet_kvietok_div = document.getElementById("noha");
 const play_btn = document.getElementById("playbtn");
 const back_btn = document.getElementById("inner1");
 
+
+var countClicks25 = 0;
+function clickcounter() {
+    countClicks25++;
+    console.log(countClicks25);
+    localStorage.setItem("clickcounter25", countClicks25);
+
+}
+
+
 //kvoli tlacidlu back, aby vedel rozoznat program body v kolach
 var score_tretie_user = localStorage.getItem("userscore23");
 var score_tretie_computer = localStorage.getItem("computerscore23");

@@ -10,6 +10,14 @@ const macka_macicka_div = document.getElementById("macka_macicka");
 
 const play_btn = document.getElementById("playbtn");
 
+var countClicks2 = 0;
+function clickcounter() {
+    countClicks2++;
+    console.log(countClicks2);
+    localStorage.setItem("clickcounter2", countClicks2);
+
+}
+
 //kvoli dalsiemu inkrementovaniu score
 var score3 = localStorage.getItem("userscore");
 var score4 = localStorage.getItem("computerscore");

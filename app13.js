@@ -13,6 +13,15 @@ const kvet_kvietok_div = document.getElementById("ruka");
 const play_btn = document.getElementById("playbtn");
 const back_btn = document.getElementById("inner1");
 
+var countClicks13 = 0;
+function clickcounter() {
+    countClicks13++;
+    console.log(countClicks13);
+    localStorage.setItem("clickcounter13", countClicks13);
+
+}
+
+
 //kvoli tlacidlu back, aby vedel rozoznat program body v kolach
 var score_prve_user = localStorage.getItem("userscore11");
 var score_prve_computer = localStorage.getItem("computerscore11");

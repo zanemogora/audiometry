@@ -12,6 +12,16 @@ const babika_spi_div = document.getElementById("dom_domcek");
 const play_btn = document.getElementById("playbtn");
 const back_btn = document.getElementById("inner1");
 
+
+var countClicks9 = 0;
+function clickcounter() {
+    countClicks9++;
+    console.log(countClicks9);
+    localStorage.setItem("clickcounter9", countClicks9);
+
+}
+
+
 //kvoli tlacidlu back, aby vedel rozoznat program body v kolach
 var score_druhe_user = localStorage.getItem("userscore7");
 var score_druhe_computer = localStorage.getItem("computerscore7");

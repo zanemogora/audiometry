@@ -11,6 +11,16 @@ const babika_spi_div = document.getElementById("kvet_kvietok");
 
 const play_btn = document.getElementById("playbtn");
 
+
+var countClicks17 = 0;
+function clickcounter() {
+    countClicks17++;
+    console.log(countClicks17);
+    localStorage.setItem("clickcounter17", countClicks17);
+
+}
+
+
 //kvoli dalsiemu inkrementovaniu score
 var score32 = localStorage.getItem("userscore16");
 var score33 = localStorage.getItem("computerscore16");
