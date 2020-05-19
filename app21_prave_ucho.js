@@ -16,6 +16,16 @@ const play_btn = document.getElementById("playbtn");
 var score40 = 0;
 var score41 = 0;
 
+
+var countClicks21 = 0;
+function clickcounter() {
+    countClicks21++;
+    console.log(countClicks21);
+    localStorage.setItem("clickcounter21", countClicks21);
+
+}
+
+
 function confirmation() {
     var user_choice = window.confirm('Naozaj si prajete ukončiť hru a presunúť sa do úvodu aplikácie ?');
     if(user_choice==true) {

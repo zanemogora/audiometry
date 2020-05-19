@@ -12,6 +12,14 @@ const autobus_div = document.getElementById("autobus");
 const play_btn = document.getElementById("playbtn");
 const back_btn = document.getElementById("inner1");
 
+var countClicks4 = 0;
+function clickcounter() {
+    countClicks4++;
+    console.log(countClicks4);
+    localStorage.setItem("clickcounter4", countClicks4);
+
+}
+
 //kvoli tlacidlu back, aby vedel rozoznat program body v kolach
 var score_druhe_user = localStorage.getItem("userscore2");
 var score_druhe_computer = localStorage.getItem("computerscore2");

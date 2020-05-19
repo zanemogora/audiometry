@@ -15,6 +15,13 @@ var score_prve_user = localStorage.getItem("userscore");
 var score_prve_computer = localStorage.getItem("computerscore");
 console.log("User:Computer prve kolo =>" + score_prve_user,score_prve_computer);
 
+var countClicks3 = 0;
+function clickcounter() {
+    countClicks3++;
+    console.log(countClicks3);
+    localStorage.setItem("clickcounter3", countClicks3);
+
+}
 //kvoli dalsiemu inkrementovaniu score
 var score5 = localStorage.getItem("userscore2");
 var score6 = localStorage.getItem("computerscore2");

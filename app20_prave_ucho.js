@@ -13,6 +13,14 @@ const kvet_kvietok_div = document.getElementById("kon_konik");
 const play_btn = document.getElementById("playbtn");
 const back_btn = document.getElementById("inner1");
 
+var countClicks20 = 0;
+function clickcounter() {
+    countClicks20++;
+    console.log(countClicks20);
+    localStorage.setItem("clickcounter20", countClicks20);
+
+}
+
 //kvoli tlacidlu back, aby vedel rozoznat program body v kolach
 var score_tretie_user = localStorage.getItem("userscore18");
 var score_tretie_computer = localStorage.getItem("computerscore18");

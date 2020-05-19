@@ -13,6 +13,14 @@ const kvet_kvietok_div = document.getElementById("banan_bananik");
 const play_btn = document.getElementById("playbtn");
 const back_btn = document.getElementById("inner1");
 
+var countClicks15 = 0;
+function clickcounter() {
+    countClicks15++;
+    console.log(countClicks15);
+    localStorage.setItem("clickcounter15", countClicks15);
+
+}
+
 //kvoli tlacidlu back, aby vedel rozoznat program body v kolach
 var score_tretie_user = localStorage.getItem("userscore13");
 var score_tretie_computer = localStorage.getItem("computerscore13");

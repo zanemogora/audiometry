@@ -26,7 +26,6 @@ var countClicksSummary5kolo = parseInt(countClicks21 || 0)  + parseInt(countClic
 localStorage.setItem("clickcountersummary5kolo", countClicksSummary5kolo);
 //console.log("Pocet kliknuti na tlacidlo PLAY cez 1.kolo = ", countClicksSummary2kolo);
 
-document.getElementById("demo").innerHTML = "PLAY kliknuté " + countClicksSummary5kolo + " x."  ;
 
 function confirmation() {
     var user_choice = window.confirm('Naozaj si prajete ukončiť hru a presunúť sa do úvodu aplikácie ?');

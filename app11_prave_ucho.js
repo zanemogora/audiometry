@@ -11,6 +11,13 @@ const babika_spi_div = document.getElementById("oci");
 
 //const playbutton_div = document.getElementById("playbutton3");
 const play_btn = document.getElementById("playbtn");
+var countClicks11 = 0;
+function clickcounter() {
+    countClicks11++;
+    console.log(countClicks11);
+    localStorage.setItem("clickcounter11", countClicks11);
+
+}
 
 var score20 = 0;
 var score21 = 0;

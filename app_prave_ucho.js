@@ -12,6 +12,13 @@ const kvet_kvietok_div = document.getElementById("kvet_kvietok");
 
 const play_btn = document.getElementById("playbtn");
 
+var countClicks1 = 0;
+function clickcounter() {
+    countClicks1++;
+    console.log(countClicks1);
+    localStorage.setItem("clickcounter1", countClicks1);
+
+}
 
 var score = 0;
 var score2 = 0;

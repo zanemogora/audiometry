@@ -90,6 +90,28 @@ var percentage = Math.floor((parseInt(score58) / number2) * 100);
 
 }
 
+var countClicksSummary1kolo = localStorage.getItem("clickcountersummary1kolo");
+document.getElementById("demo3").innerHTML = "Počet pokusov: " + countClicksSummary1kolo + " x."  ;
+
+var countClicksSummary2kolo = localStorage.getItem("clickcountersummary2kolo");
+document.getElementById("demo4").innerHTML = "Počet pokusov: " + countClicksSummary2kolo + " x."  ;
+
+var countClicksSummary3kolo = localStorage.getItem("clickcountersummary3kolo");
+document.getElementById("demo5").innerHTML = "Počet pokusov: " + countClicksSummary3kolo + " x."  ;
+
+var countClicksSummary4kolo = localStorage.getItem("clickcountersummary4kolo");
+document.getElementById("demo6").innerHTML = "Počet pokusov: " + countClicksSummary4kolo + " x."  ;
+
+var countClicksSummary5kolo = localStorage.getItem("clickcountersummary5kolo");
+document.getElementById("demo7").innerHTML = "Počet pokusov: " + countClicksSummary5kolo + " x."  ;
+
+
+var countClicksSummary = parseInt(countClicksSummary1kolo|| 0) + parseInt(countClicksSummary2kolo|| 0) + parseInt(countClicksSummary3kolo|| 0) + parseInt(countClicksSummary4kolo|| 0) + parseInt(countClicksSummary5kolo|| 0);
+document.getElementById("demo8").innerHTML = "Počet pokusov celkovo: " + countClicksSummary + " x."  ;
+
+
+
+
 
 function confirmation() {
     var user_choice = window.confirm('Naozaj si prajete ukončiť hru a presunúť sa do úvodu aplikácie ?');

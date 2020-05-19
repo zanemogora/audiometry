@@ -12,6 +12,15 @@ const autobus_div = document.getElementById("kvet_kvietok");
 
 const play_btn = document.getElementById("playbtn");
 
+var countClicks7 = 0;
+function clickcounter() {
+    countClicks7++;
+    console.log(countClicks7);
+    localStorage.setItem("clickcounter7", countClicks7);
+
+}
+
+
 var score12 = localStorage.getItem("userscore6");
 var score13 = localStorage.getItem("computerscore6");
 userScore_span.innerHTML = score12;

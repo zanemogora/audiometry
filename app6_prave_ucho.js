@@ -12,6 +12,14 @@ const autobus_div = document.getElementById("dzus_dzusik");
 
 const play_btn = document.getElementById("playbtn");
 
+var countClicks6 = 0;
+function clickcounter() {
+    countClicks6++;
+    console.log(countClicks6);
+    localStorage.setItem("clickcounter6", countClicks6);
+
+}
+
 var score10 = 0;
 var score11 = 0;
 

@@ -12,6 +12,13 @@ const noha_div = document.getElementById("noha");
 
 const play_btn = document.getElementById("playbtn");
 
+var countClicks22 = 0;
+function clickcounter() {
+    countClicks22++;
+    console.log(countClicks22);
+    localStorage.setItem("clickcounter22", countClicks22);
+
+}
 //kvoli dalsiemu inkrementovaniu score
 var score41 = localStorage.getItem("userscore21");
 var score42 = localStorage.getItem("computerscore21");

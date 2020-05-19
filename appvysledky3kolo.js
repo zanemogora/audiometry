@@ -27,7 +27,6 @@ var countClicksSummary3kolo = parseInt(countClicks11 || 0)  + parseInt(countClic
 localStorage.setItem("clickcountersummary3kolo", countClicksSummary3kolo);
 //console.log("Pocet kliknuti na tlacidlo PLAY cez 1.kolo = ", countClicksSummary2kolo);
 
-document.getElementById("demo").innerHTML = "PLAY kliknuté " + countClicksSummary3kolo + " x."  ;
 
 
 
