@@ -1,42 +1,80 @@
 <html lang="en">
 <head>
-  <title>Fetch using MySQL and Node.js</title>
+  <title>Databáza používateľov aplikácie</title>
+  <h1>Databáza používateľov aplikácie</h1>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    table, td, th {
-      border: 1px solid #ddd;
-      text-align: left;
-    }
+  body {
+    background: url(images/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 
-    table {
-      border-collapse: collapse;
-      width: 50%;
+  #outer
+  {
+      width:100%;
+        bottom: 0;
+        left: 0;
+      text-align: center;
+      margin-left: -50px
 
-    }
-    .table-data{
-        position: relative;
-      left:150px;
-      top:100px;
-    }
-    th, td {
-      padding: 15px;
-    }
+
+  }
+  .inner
+  {
+      display: inline-block;
+      margin-left: 100px
+
+  }
+
+  table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 20px;
+
+  }
+
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even){background-color: #f2f2f2}
+
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  header >h1 {
+      color: black;
+      font-size: 60px;
+      text-align: center;
+      font-family: Impact, Charcoal, sans-serif;
+      position: relative;
+        top: -30;
+        left: 0;
+  }
+
     </style>
+
 </head>
 <body>
     <div class="table-data">
-<h2>Display Data using Node.js & MySQL</h2>
     <table border="1">
         <tr>
             <th>ID</th>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Sex</th>
-            <th>Test</th>
-            <th>Score</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th>Meno</th>
+            <th>Vek</th>
+            <th>Pohlavie</th>
+            <th>Typ testu</th>
+            <th>Skóre</th>
+        <!---    <th>Edit</th>
+            <th>Delete</th>  --->
         </tr>
 
         <%
@@ -52,8 +90,8 @@
             <td><%=data.test %></td>
             <td><%=data.score %></td>
 
-            <td><a href="/edit/<%=data.id%>">Edit</a></td>
-            <td><a href="/user/<%=data.id%>">Delete</a></td>
+          <!---  <td><a href="/edit/<%=data.id%>">Edit</a></td>
+            <td><a href="/user/<%=data.id%>">Delete</a></td> --->
         </tr>
         <%  i++; }) %>
         <% } else{ %>
@@ -62,6 +100,29 @@
             </tr>
         <% } %>
     </table>
+
+
     </div>
+
+    <div id="outer">
+
+        <div class="inner" id="inner1">
+                <a href="#" id="login" onclick="document.location=this.id+'.html';return false; " >
+                    <img src="images/back.png" alt="" width="100" height="100">
+                </a>
+        </div>
+
+        <div class="inner">
+            <a href="#" id="index" onclick="confirmation(); " >
+                <img src="images/home.png" alt="" width="100" height="100">
+            </a>
+        </div>
+
+
+
+    </div>
+
+     <script src="pribeh_lave_ucho.js" charset="utf-8"></script>
+
 </body>
 </html>
