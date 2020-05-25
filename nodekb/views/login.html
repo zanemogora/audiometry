@@ -6,6 +6,65 @@
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
         <style>
+
+        * {
+          box-sizing: border-box;
+            }
+
+            input[type=text], select, textarea {
+              width: 80%;
+              padding: 20px;
+              border: 5px solid #ccc;
+              border-radius: 10px;
+              resize: vertical;
+            }
+
+            label {
+              padding: 12px 12px 20px 0;
+              display: inline-block;
+            }
+
+            input[type=submit] {
+              background-color: #4CAF50;
+              color: white;
+              padding: 5px 5px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              float: right;
+            }
+
+            input[type=submit]:hover {
+              background-color: #45a049;
+            }
+
+            .container {
+              border-radius: 5px;
+              background-color: #f2f2f2;
+              padding: 5px;
+            }
+
+            .col-25 {
+              float: left;
+              width: 25%;
+              margin-top: 6px;
+            }
+
+            .col-75 {
+              float: left;
+              width: 75%;
+              margin-top: 6px;
+            }
+
+
+
+            /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+            @media screen and (max-width: 2560px) {
+              .col-25, .col-75, input[type=submit] {
+                width: 100%;
+                margin-top: 20;
+              }
+            }
             body {
               background: url(images/background.jpg) no-repeat center center fixed;
               -webkit-background-size: cover;
@@ -13,7 +72,7 @@
               -o-background-size: cover;
               background-size: cover;
 
-              padding-top:50px;
+              padding-top:20px;
               padding: 30px 100px;
               font-size: 40px;
               display: block;/*centrovanie tlacidla 1.riadok*/
@@ -26,6 +85,35 @@
               border-radius: 15px;
               box-shadow: 0 9px #999;
             }
+
+
+
+
+            header >h1 {
+                color: black;
+                font-size: 60px;
+                text-align: center;
+                font-family: Impact, Charcoal, sans-serif;
+                position: relative;
+                  top: -30;
+                  left: 0;
+            }
+
+            button[type=submit] {
+              padding: 30px 70px;
+              font-size: 40px;
+              display: block;/*centrovanie tlacidla 1.riadok*/
+              margin: auto;/*centrovanie tlacidla 2.riadok*/
+              text-align: center;
+              cursor: pointer;
+              outline: none;
+              color: #fff;
+              background-color: #4CAF50;
+              border: none;
+              border-radius: 15px;
+              box-shadow: 0 9px #999;
+            }
+
             #outer
             {
                 width:100%;
@@ -41,31 +129,9 @@
 
             }
 
-            header >h1 {
-                color: black;
-                font-size: 60px;
-                text-align: center;
-                font-family: Impact, Charcoal, sans-serif;
-                position: relative;
-                  top: -30;
-                  left: 0;
+            input {
+                width: 80%;
             }
-
-            button[type=submit] {
-              padding: 30px 100px;
-              font-size: 40px;
-              display: block;/*centrovanie tlacidla 1.riadok*/
-              margin: auto;/*centrovanie tlacidla 2.riadok*/
-              text-align: center;
-              cursor: pointer;
-              outline: none;
-              color: #fff;
-              background-color: #4CAF50;
-              border: none;
-              border-radius: 15px;
-              box-shadow: 0 9px #999;
-            }
-
 
         </style>
 
@@ -74,11 +140,33 @@
 <body>
 
     <form action="/" method="POST">
-        <div><input type="text" name="meno" placeholder="Meno" value="" required></div><br/>
-        <div><input type="number" name="vek" placeholder="Vek" value="" required></div><br/>
-        <div><input type="text" name="pohlavie" placeholder="Pohlavie" value="" required></div><br/>
-        <div><input type="text" name="testy" placeholder="Typ testu" value="" required></div><br/>
-        <div><input type="number" name="skore" placeholder="Skóre" value="" required></div><br/>
+      <div><label for="meno">Napíšte svoje meno:</label>
+
+        <div><input type="text" name="meno" placeholder="Meno" value="" required maxlength="20"/></div><br/>
+
+        <div><label for="meno">Napíšte svoj vek:</label>
+
+        <div><input type="number" name="vek" placeholder="Vek" value="" required min="1" max="125"></div><br/>
+
+        <div><label for="pohlavie" type="text" name="pohlavie" placeholder="Pohlavie" value="" required>Vyberte svoje pohlavie:</label>
+
+        <select name="pohlavie" id="pohlavie">
+          <option>Muž</option>
+          <option>Žena</option>
+        </select>
+
+        <div><label for="testy" type="text" name="testy" placeholder="Typ testu" value="" required>Vyberte typ testu:</label>
+
+        <select name="testy" id="testy">
+          <option>Reproduktory</option>
+          <option>Ľavé ucho</option>
+          <option>Pravé ucho</option>
+        </select>
+
+        <div><label for="meno">Uveďte celkový počet správnych odpovedí:</label>
+
+        <div><input type="number" name="skore" placeholder="Skóre" value="" required min="0" max="25"></div><br/>
+
         <button type="submit">Odoslať údaje do databázy</button>
       </form>
 
