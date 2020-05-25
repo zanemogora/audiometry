@@ -1,4 +1,5 @@
 var express = require('express');
+var router = express.Router();
 var bodyParser = require('body-parser');
 var multer = require('multer');
 var upload = multer();
@@ -6,6 +7,7 @@ var app = express();
 
 const sqlite3 = require('sqlite3').verbose();
 const DB_PATH = './NodejsSQL/sqlite.db';
+
 
 //starting database
 const DB = new sqlite3.Database(DB_PATH, function(err){
@@ -56,48 +58,13 @@ function registerUser(name, age, sex, test, score) {
     });
 };
 
-
-
-//vypisanie databazy na konzolu
-
-/*function readUser(){
-
-    DB.all("SELECT * FROM Pouzivatelia", function(err, rows) {
-
-        rows.forEach(function (row) {
-          console.log(row);    // and other columns, if desired
-
-        })
-
-    });
-
-}*/
-
-/*function getUsers() {
-    var sql = 'SELECT * '
-    sql += 'FROM Pouzivatelia '
-
-    DB.all(sql, [], function(error, rows) {
-        if (error) {
-            console.log(error)
-            return
-        }
-
-        listUserEmails(rows)
-    });
-}*/
-
-//getUserEmails()
 //DB.close();
 
-
 app.get('/', function(req, res){
-  res.sendFile('C:/Users/Lukáš Hudák/Desktop/serverova appka 23.5.2020/nodekb/views/index.html');
-   //res.render('form');
+
+  res.sendFile('C:/Users/Lukáš Hudák/Desktop/serverova appka 24.5.2020/nodekb/views/index.html');
 });
 
-app.set('view engine', 'pug');
-app.set('views', './views');
 
 // for parsing application/json
 app.use(bodyParser.json());
@@ -108,46 +75,21 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // for parsing multipart/form-data
 app.use(upload.array());
-app.use(express.static('public'));
-
+app.use(express.static('views'));
 
 
 app.post('/', function (req, res){
 
   registerUser(req.body.meno, req.body.vek, req.body.pohlavie, req.body.testy, req.body.skore);
 
-
-  DB.all('SELECT * FROM Pouzivatelia', function(error, rows, fields){
-    if (error) console.log(error);
-
-    else {
-      //console.log(rows);
-      res.send(rows);
-    }
+  var sql='SELECT * FROM Pouzivatelia';
+  DB.all(sql, function (err, data, fields) {
+  if (err) throw err;
+  res.render('user-list.ejs', { title: 'User List', userData: data});
   });
+  module.exports = app;
 
 });
-
-/*app.post('/', function(req, res){
-      //req.body obsahuje prenasane udaje
-       /*console.log(req.body.meno);
-       console.log(req.body.vek);
-       console.log(req.body.pohlavie);
-       console.log(req.body.testy);
-       console.log(req.body.skore);
-
-
-    //readUser();
-
-    res.send("Udaje boli ulozene");
-       /*var insert = function (req)
-       {
-           db.run('INSERT INTO Pouzivatelia (name, age, sex, test, score) VALUES ("'+req.body.meno+'","'+req.body.vek+'", "'+req.body.pohlavie+'", "'+req.body.testy+'", "'+req.body.skore+'")');
-       }
-
-
-});*/
-
 
 
 
