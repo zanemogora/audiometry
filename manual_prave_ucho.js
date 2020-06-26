@@ -30,7 +30,7 @@ function playFunc(target, RepeatCount) {
 function main(){
    
     playbtn.addEventListener('click', function() {
-            var audio = new Audio('audio_prave_ucho/1000Hz.wav');
+            var audio = new Audio('audio_prave_ucho/5_viet.wav');
             audio.play();
             playFunc(audio, 1);
             
